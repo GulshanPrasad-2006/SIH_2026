@@ -1,0 +1,51 @@
+{
+  "model_name": "SATARK-KOYLA Hybrid Mine Risk Predictor",
+  "model_version": "hybrid_rf_if_v1",
+  "training_timestamp": "2026-09-04T16:11:06.952371",
+  "optimal_threshold": 0.38,
+  "feature_names": [
+    "total_violations",
+    "critical_violations",
+    "major_violations",
+    "minor_violations",
+    "critical_ratio",
+    "overdue_count",
+    "overdue_rate",
+    "compliance_score",
+    "mean_time_to_fix_hours",
+    "methane_ch4_pct",
+    "dust_ppm",
+    "strata_tell_tale_mm",
+    "depth_meters",
+    "gassy_degree_num",
+    "is_underground",
+    "compliance_mean_4w",
+    "compliance_mean_13w",
+    "compliance_trend",
+    "compliance_min_13w",
+    "violations_sum_4w",
+    "violations_sum_13w",
+    "violation_momentum",
+    "critical_max_13w",
+    "frac_bad_weeks_13w",
+    "weeks_since_last_critical",
+    "depth_norm",
+    "interaction_gassy_critical",
+    "interaction_depth_strata",
+    "interaction_mttf_overdue",
+    "dgms_hazard_index",
+    "if_anomaly_score"
+  ],
+  "base_feature_count": 30,
+  "total_feature_count": 31,
+  "target_class": "is_high_risk",
+  "class_labels": {
+    "0": "Low / Safe Risk",
+    "1": "High Risk Statutory Concern"
+  },
+  "metrics_target": {
+    "accuracy": 92.7,
+    "recall": 88.1,
+    "f1": 0.84
+  }
+}

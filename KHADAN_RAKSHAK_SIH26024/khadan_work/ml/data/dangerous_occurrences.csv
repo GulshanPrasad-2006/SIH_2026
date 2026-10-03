@@ -1,0 +1,181 @@
+year,cause,occurrences
+2013,Over winding of cages/skip/bucket,1
+2014,Over winding of cages/skip/bucket,2
+2015,Over winding of cages/skip/bucket,0
+2016,Over winding of cages/skip/bucket,1
+2017,Over winding of cages/skip/bucket,0
+2018,Over winding of cages/skip/bucket,0
+2019,Over winding of cages/skip/bucket,0
+2020,Over winding of cages/skip/bucket,0
+2021,Over winding of cages/skip/bucket,0
+2022,Over winding of cages/skip/bucket,1
+2013,Spontaneous heating of coal underground,4
+2014,Spontaneous heating of coal underground,2
+2015,Spontaneous heating of coal underground,0
+2016,Spontaneous heating of coal underground,2
+2017,Spontaneous heating of coal underground,3
+2018,Spontaneous heating of coal underground,0
+2019,Spontaneous heating of coal underground,1
+2020,Spontaneous heating of coal underground,1
+2021,Spontaneous heating of coal underground,2
+2022,Spontaneous heating of coal underground,1
+2013,Spontaneous heating of coal on surface,3
+2014,Spontaneous heating of coal on surface,0
+2015,Spontaneous heating of coal on surface,7
+2016,Spontaneous heating of coal on surface,0
+2017,Spontaneous heating of coal on surface,0
+2018,Spontaneous heating of coal on surface,0
+2019,Spontaneous heating of coal on surface,0
+2020,Spontaneous heating of coal on surface,0
+2021,Spontaneous heating of coal on surface,0
+2022,Spontaneous heating of coal on surface,0
+2013,Spontaneous heating of coal in opencast,2
+2014,Spontaneous heating of coal in opencast,0
+2015,Spontaneous heating of coal in opencast,0
+2016,Spontaneous heating of coal in opencast,0
+2017,Spontaneous heating of coal in opencast,1
+2018,Spontaneous heating of coal in opencast,1
+2019,Spontaneous heating of coal in opencast,0
+2020,Spontaneous heating of coal in opencast,1
+2021,Spontaneous heating of coal in opencast,0
+2022,Spontaneous heating of coal in opencast,0
+2013,Outbreak of fire underground from spont. heating,1
+2014,Outbreak of fire underground from spont. heating,0
+2015,Outbreak of fire underground from spont. heating,0
+2016,Outbreak of fire underground from spont. heating,0
+2017,Outbreak of fire underground from spont. heating,0
+2018,Outbreak of fire underground from spont. heating,0
+2019,Outbreak of fire underground from spont. heating,0
+2020,Outbreak of fire underground from spont. heating,0
+2021,Outbreak of fire underground from spont. heating,0
+2022,Outbreak of fire underground from spont. heating,0
+2013,Outbreak of fire underground other causes,0
+2014,Outbreak of fire underground other causes,0
+2015,Outbreak of fire underground other causes,0
+2016,Outbreak of fire underground other causes,0
+2017,Outbreak of fire underground other causes,0
+2018,Outbreak of fire underground other causes,1
+2019,Outbreak of fire underground other causes,0
+2020,Outbreak of fire underground other causes,0
+2021,Outbreak of fire underground other causes,1
+2022,Outbreak of fire underground other causes,0
+2013,Outbreak of fire in quarry other causes,1
+2014,Outbreak of fire in quarry other causes,0
+2015,Outbreak of fire in quarry other causes,1
+2016,Outbreak of fire in quarry other causes,1
+2017,Outbreak of fire in quarry other causes,0
+2018,Outbreak of fire in quarry other causes,0
+2019,Outbreak of fire in quarry other causes,0
+2020,Outbreak of fire in quarry other causes,0
+2021,Outbreak of fire in quarry other causes,0
+2022,Outbreak of fire in quarry other causes,3
+2013,Outbreak of fire on surface other causes,2
+2014,Outbreak of fire on surface other causes,2
+2015,Outbreak of fire on surface other causes,2
+2016,Outbreak of fire on surface other causes,2
+2017,Outbreak of fire on surface other causes,4
+2018,Outbreak of fire on surface other causes,8
+2019,Outbreak of fire on surface other causes,2
+2020,Outbreak of fire on surface other causes,2
+2021,Outbreak of fire on surface other causes,5
+2022,Outbreak of fire on surface other causes,2
+2013,Premature collapse of workings/failure of pillars,1
+2014,Premature collapse of workings/failure of pillars,0
+2015,Premature collapse of workings/failure of pillars,1
+2016,Premature collapse of workings/failure of pillars,2
+2017,Premature collapse of workings/failure of pillars,0
+2018,Premature collapse of workings/failure of pillars,1
+2019,Premature collapse of workings/failure of pillars,0
+2020,Premature collapse of workings/failure of pillars,0
+2021,Premature collapse of workings/failure of pillars,0
+2022,Premature collapse of workings/failure of pillars,2
+2013,Influx of noxious gases,2
+2014,Influx of noxious gases,0
+2015,Influx of noxious gases,0
+2016,Influx of noxious gases,1
+2017,Influx of noxious gases,1
+2018,Influx of noxious gases,0
+2019,Influx of noxious gases,0
+2020,Influx of noxious gases,0
+2021,Influx of noxious gases,1
+2022,Influx of noxious gases,1
+2013,Breakage of winding rope,1
+2014,Breakage of winding rope,0
+2015,Breakage of winding rope,0
+2016,Breakage of winding rope,0
+2017,Breakage of winding rope,0
+2018,Breakage of winding rope,0
+2019,Breakage of winding rope,0
+2020,Breakage of winding rope,0
+2021,Breakage of winding rope,0
+2022,Breakage of winding rope,0
+2013,Breakdown of winding engine/crankshaft/bearing,1
+2014,Breakdown of winding engine/crankshaft/bearing,1
+2015,Breakdown of winding engine/crankshaft/bearing,0
+2016,Breakdown of winding engine/crankshaft/bearing,0
+2017,Breakdown of winding engine/crankshaft/bearing,0
+2018,Breakdown of winding engine/crankshaft/bearing,0
+2019,Breakdown of winding engine/crankshaft/bearing,2
+2020,Breakdown of winding engine/crankshaft/bearing,0
+2021,Breakdown of winding engine/crankshaft/bearing,0
+2022,Breakdown of winding engine/crankshaft/bearing,0
+2013,Ignition or occurrence of inflammable gas,0
+2014,Ignition or occurrence of inflammable gas,1
+2015,Ignition or occurrence of inflammable gas,0
+2016,Ignition or occurrence of inflammable gas,1
+2017,Ignition or occurrence of inflammable gas,1
+2018,Ignition or occurrence of inflammable gas,2
+2019,Ignition or occurrence of inflammable gas,0
+2020,Ignition or occurrence of inflammable gas,1
+2021,Ignition or occurrence of inflammable gas,0
+2022,Ignition or occurrence of inflammable gas,0
+2013,Breakage/fracture/failure of essential machinery,0
+2014,Breakage/fracture/failure of essential machinery,1
+2015,Breakage/fracture/failure of essential machinery,6
+2016,Breakage/fracture/failure of essential machinery,0
+2017,Breakage/fracture/failure of essential machinery,0
+2018,Breakage/fracture/failure of essential machinery,1
+2019,Breakage/fracture/failure of essential machinery,2
+2020,Breakage/fracture/failure of essential machinery,1
+2021,Breakage/fracture/failure of essential machinery,0
+2022,Breakage/fracture/failure of essential machinery,4
+2013,Irruption of water,1
+2014,Irruption of water,4
+2015,Irruption of water,1
+2016,Irruption of water,0
+2017,Irruption of water,2
+2018,Irruption of water,0
+2019,Irruption of water,0
+2020,Irruption of water,1
+2021,Irruption of water,1
+2022,Irruption of water,2
+2013,Subsidences,0
+2014,Subsidences,0
+2015,Subsidences,0
+2016,Subsidences,0
+2017,Subsidences,4
+2018,Subsidences,0
+2019,Subsidences,0
+2020,Subsidences,0
+2021,Subsidences,0
+2022,Subsidences,1
+2013,Explosives,0
+2014,Explosives,1
+2015,Explosives,0
+2016,Explosives,0
+2017,Explosives,2
+2018,Explosives,1
+2019,Explosives,0
+2020,Explosives,2
+2021,Explosives,0
+2022,Explosives,2
+2013,Others,27
+2014,Others,41
+2015,Others,13
+2016,Others,9
+2017,Others,8
+2018,Others,9
+2019,Others,1
+2020,Others,11
+2021,Others,5
+2022,Others,14

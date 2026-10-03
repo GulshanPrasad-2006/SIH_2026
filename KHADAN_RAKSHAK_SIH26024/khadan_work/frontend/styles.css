@@ -1,0 +1,244 @@
+/* ==========================================================================
+   KHADAN RAKSHAK - Statutory Coal Mine Safety & Compliance Monitoring Portal
+   Official Styling & Government Branding Rules
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --gov-primary: #0b2545;
+  --gov-primary-light: #133b68;
+  --gov-accent: #f59e0b;
+  --gov-saffron: #ff9933;
+  --gov-white: #ffffff;
+  --gov-green: #138808;
+  --bg-slate: #f1f5f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans Devanagari', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-slate);
+  color: #0f172a;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Government Official Tricolor Strip */
+.gov-tricolor {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    to right, 
+    var(--gov-saffron) 0%, 
+    var(--gov-saffron) 33.33%, 
+    var(--gov-white) 33.33%, 
+    var(--gov-white) 66.66%, 
+    var(--gov-green) 66.66%, 
+    var(--gov-green) 100%
+  );
+}
+
+/* Official Portal Header Ribbon */
+.gov-header-bg {
+  background: linear-gradient(135deg, var(--gov-primary) 0%, var(--gov-primary-light) 100%);
+}
+
+/* Severity Badges */
+.badge-critical {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+}
+
+.badge-major {
+  background-color: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fb923c;
+}
+
+.badge-minor {
+  background-color: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #facc15;
+}
+
+/* DGMS Escalated Alert & Show-Cause Badge */
+.badge-dgms-alert {
+  background-color: #7f1d1d;
+  color: #fef2f2;
+  border: 1px solid #ef4444;
+  animation: dgmsPulse 2s infinite;
+}
+
+.border-dgms-escalated {
+  border-left: 5px solid #b91c1c !important;
+  background: linear-gradient(to right, rgba(254, 242, 242, 0.6), #ffffff);
+}
+
+@keyframes dgmsPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(239, 68, 68, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+/* Mine Health Risk Class Indicators */
+.health-high-risk {
+  background: #fff;
+  border-left: 5px solid #dc2626 !important;
+}
+
+.health-moderate-risk {
+  background: #fff;
+  border-left: 5px solid #d97706 !important;
+}
+
+.health-safe-risk {
+  background: #fff;
+  border-left: 5px solid #059669 !important;
+}
+
+/* Captcha Character Visual Jitter */
+.captcha-box {
+  background: #e2e8f0;
+  letter-spacing: 0.25em;
+  font-family: 'JetBrains Mono', monospace;
+  user-select: none;
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* Smooth Transitions */
+.screen-transition {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar for statutory tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Toast Animations */
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(1rem) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.toast-item {
+  animation: toastSlideIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* DGMS Work Stoppage Section 22 Flashing Border */
+@keyframes warningStrobe {
+  0%, 100% {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+  }
+  50% {
+    border-color: #b91c1c;
+    background-color: #fee2e2;
+  }
+}
+
+.stoppage-active-banner {
+  animation: warningStrobe 2.5s infinite;
+}
+
+/* Normal popping in and out twice and then settling */
+@keyframes popInOutTwice {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.045);
+  }
+  40% {
+    transform: scale(0.975);
+  }
+  60% {
+    transform: scale(1.035);
+  }
+  80% {
+    transform: scale(0.99);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.pop-twice,
+.blink-twice {
+  animation: popInOutTwice 1.25s cubic-bezier(0.25, 1, 0.5, 1) 1 forwards;
+  transform-origin: center;
+}
+
+/* Screen 17 — offline DGMS paper-map renderer */
+.paper-map-svg{display:block;width:100%;height:100%;min-height:520px;font-family:Arial,Helvetica,sans-serif}
+.paper-map-svg .map-grid{stroke:#8f7b5b;stroke-width:1;stroke-dasharray:3 5;opacity:.34}
+.paper-map-svg .coord-label{font-size:10px;fill:#756246;font-family:monospace}
+.paper-map-svg .map-title{font-size:18px;font-weight:800;letter-spacing:1.2px;fill:#382b1b}
+.paper-map-svg .map-subtitle{font-size:11px;fill:#6b573b}
+.paper-map-svg .north-label{font-size:12px;font-weight:800;fill:#111827}
+.paper-map-svg .mine-label{font-size:12px;font-weight:700;fill:#26321f;paint-order:stroke;stroke:#efe2c1;stroke-width:4px;stroke-linejoin:round}
+.paper-map-svg .legend-text{font-size:11px;font-weight:700;fill:#433521}
+.paper-map-svg .mine-pin{cursor:default}
+.paper-map-svg .mine-pin:hover{filter:drop-shadow(0 1px 2px rgba(0,0,0,.35))}
+/* Screen 17 GIS labels */
+.paper-map-svg .violation-label { font-size: 10px; font-weight: 700; fill: #1f2937; paint-order: stroke; stroke: #efe2c1; stroke-width: 3px; stroke-linejoin: round; }
+.paper-map-svg .mine-label { font-size: 12px; font-weight: 800; fill: #111827; paint-order: stroke; stroke: #efe2c1; stroke-width: 4px; stroke-linejoin: round; }
+.paper-map-svg .map-grid { stroke: #7c8a68; stroke-width: 1; opacity: .35; }
+.paper-map-svg .coord-label { font-size: 9px; fill: #5b6470; }
+.paper-map-svg .map-title { font-size: 18px; font-weight: 900; fill: #1f2937; }
+.paper-map-svg .map-subtitle { font-size: 11px; fill: #4b5563; }
+.paper-map-svg .legend-text { font-size: 10px; font-weight: 700; fill: #1f2937; }
+.paper-map-svg .north-label { font-size: 12px; font-weight: 900; fill: #111827; }
+
+
+/* Connectivity and offline-queue status */
+.network-online { background: #14532d; color: #dcfce7; border: 1px solid #166534; }
+.network-offline { background: #7f1d1d; color: #fee2e2; border: 1px solid #991b1b; }
+@media (max-width: 640px) { #offline-queue-count, #network-status { font-size: 10px; } }

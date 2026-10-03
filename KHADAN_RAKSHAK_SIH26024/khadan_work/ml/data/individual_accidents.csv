@@ -1,0 +1,351 @@
+year,date,mine_name,owner,company_abbr,district,state,mine_type,cause_code,cause,num_killed
+2016,2016-03-27,BANGWAR U/G PROJECT,South Eastern Coalfields Ltd.,ECL,Shahdol,Madhya Pradesh,Underground,0111,Fall of Roof,1
+2016,2016-04-09,PIPARIA COLLIERY,South Eastern Coalfields Ltd.,ECL,Umaria,Madhya Pradesh,Underground,0111,Fall of Roof,2
+2016,2016-04-13,SHANTIKHANI,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0111,Fall of Roof,3
+2016,2016-04-19,CHURCHA,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0111,Fall of Roof,1
+2016,2016-09-04,RAVINDRA KHANI NO.5,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0111,Fall of Roof,1
+2016,2016-09-22,RAVINDRA KHANI NO.7,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0111,Fall of Roof,1
+2016,2016-11-16,SRIPUR SEAM INCLINE,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Underground,0111,Fall of Roof,1
+2016,2016-11-28,PALI,South Eastern Coalfields Ltd.,ECL,Umaria,Madhya Pradesh,Unknown,0111,Fall of Roof,1
+2016,2016-02-06,SHANTIKHANI,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2016,2016-03-22,BASTACOLA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2016,2016-08-24,MADHUSUDANPUR 7 PIT & INCLINE,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Underground,0112,Fall of Sides (Other than Overhangs),1
+2016,2016-11-26,VINDHYA PROJECT,South Eastern Coalfields Ltd.,ECL,Umaria,Madhya Pradesh,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2016,2016-10-19,NANDIRA,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0113,Fall of Overhangs,1
+2016,2016-12-29,RAJMAHAL OCP,Eastern Coalfields Ltd.,ECL,Godda,Jharkhand,Opencast,0118,Landslide,0
+2016,2016-08-18,KUNUSTORIA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0223,"Falls of Persons from Cages, Skip etc.",1
+2016,2016-09-23,WEST BOKARO O/C (QUARRY A & B ),Tata Iron & Steel Co. Ltd.,Other/Private,Ramgarh,Jharkhand,Opencast,0331,Aerial Ropeway,1
+2016,2016-02-24,MANDERBONI,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0332,Rope Haulage,1
+2016,2016-02-27,RAVINDRA KHANI NO.6,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0332,Rope Haulage,1
+2016,2016-07-24,AMRITNAGAR,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0332,Rope Haulage,1
+2016,2016-09-08,JAMADOBA,Tata Iron & Steel Co. Ltd.,Other/Private,Dhanbad,Jharkhand,Unknown,0332,Rope Haulage,1
+2016,2016-10-17,KAKATIYA KHANI NO.5 INCLINE,Singareni Collieries Company Ltd.,SCCL,Warangal,Telangana,Underground,0332,Rope Haulage,1
+2016,2016-04-18,SILEWARA,Western Coalfields Ltd.,WCL,Nagpur,Maharashtra,Unknown,0334,Conveyors,1
+2016,2016-10-21,JAMUNIA UG MINE,Western Coalfields Ltd.,WCL,Chhindwara,Madhya Pradesh,Underground,0334,Conveyors,1
+2016,2016-01-23,NIGAHI PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2016,2016-02-29,AMALGAMATED KESHALPUR-WEST MUDIDIH,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0335,Dumpers,1
+2016,2016-03-18,NIGAHI PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2016,2016-03-26,BANSRA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0335,Dumpers,1
+2016,2016-04-09,AMLO,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Unknown,0335,Dumpers,1
+2016,2016-06-02,KHADIA PROJECT,Northern Coalfields Ltd.,NCL,Sonebhadra,Uttar Pradesh,Unknown,0335,Dumpers,1
+2016,2016-09-10,"BLOCK ""B"" PROJECT",Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2016,2016-09-23,KUJAMA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0335,Dumpers,1
+2016,2016-12-26,PRAKASHAM KHANI OPENCAST MINE,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Opencast,0335,Dumpers,1
+2016,2016-03-18,JHARKHAND OCP,Central Coalfields Ltd.,CCL,Ramgarh,Jharkhand,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-04-06,KOLAR PIMPRI O.C,Western Coalfields Ltd.,WCL,Yavatmal,Maharashtra,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-04-25,JAMPALLI O/C MINE,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-06-01,GIDI A,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-06-17,KANCHAN O/C,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-08-27,GARE PALMA IV/2&8 OCM,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-08-30,KHAS MAHAL PROJECT,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-09-30,GAZLITAND,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-10-20,MURAIDIH,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",2
+2016,2016-10-26,SHYAMSUNDARPUR,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-12-27,AMLAI OCM,South Eastern Coalfields Ltd.,ECL,Shahdol,Madhya Pradesh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2016,2016-01-10,BANKOLA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0443,Loading Machines,1
+2016,2016-04-22,AMALGAMATED BLOCK II OCP,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0443,Loading Machines,1
+2016,2016-04-26,BAGDEWA U/G MINE,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Underground,0443,Loading Machines,1
+2016,2016-06-08,RAVINDRA KHANI NEW TECH,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0443,Loading Machines,1
+2016,2016-07-16,DURGAPUR RAYATWARI,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0443,Loading Machines,1
+2016,2016-12-02,BHARATPUR PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0443,Loading Machines,1
+2016,2016-05-12,RAJMAHAL OCP,Eastern Coalfields Ltd.,ECL,Godda,Jharkhand,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2016,2016-05-19,MOHER & MOHER AMLOHRI EXTENSION OCP,M/S SASAN POWER LTD.,Other/Private,Singrauli,Madhya Pradesh,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2016,2016-09-05,ASHOK OPENCAST PROJECT,Central Coalfields Ltd.,CCL,Chatra,Jharkhand,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2016,2016-06-18,CHORA 7 & 9 PIT COLLIERY,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Underground,0661,Overhead Lines,1
+2016,2016-08-24,MURAIDIH,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0661,Overhead Lines,1
+2016,2016-07-19,GODAVARI KHANI NO.7(LE)PROJECT,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0771,Occurrence of Gas,1
+2016,2016-03-12,CHHATARPUR MINE NO.I,Western Coalfields Ltd.,WCL,Betul,Madhya Pradesh,Unknown,0774,Explosion/Ignition of Gas/Dust etc.,1
+2016,2016-04-10,MIC JHANJHRA PROJECT,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0778,Other Combustible Material,2
+2016,2016-02-22,SALANPUR,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0779,Other Accidents due to Dust/Gas/Fire,1
+2016,2016-05-11,JALAGAM VENGALA RAO OPENCAST-1 MINE,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Opencast,0881,Fall of Person from Height/into Depth,1
+2016,2016-05-25,JEENAGORA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0881,Fall of Person from Height/into Depth,1
+2016,2016-06-25,AMALGAMATED BLOCK II OCP,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0881,Fall of Person from Height/into Depth,1
+2016,2016-08-05,DOBARY,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0881,Fall of Person from Height/into Depth,1
+2016,2016-02-14,SASTI OC,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0883,Fall of Objects incl. Rolling Objects,1
+2016,2016-09-12,PAREJ EAST OCP,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Opencast,0883,Fall of Objects incl. Rolling Objects,1
+2016,2016-02-01,NEYVELI NO 2,Neyveli Lignite Corporation Ltd.,Other/Private,Cuddalore,Tamil Nadu,Unknown,0993,Drowning in Water,1
+2016,2016-02-16,NEYVELI NO 2,Neyveli Lignite Corporation Ltd.,Other/Private,Cuddalore,Tamil Nadu,Unknown,0993,Drowning in Water,1
+2016,2016-05-16,CHASNALLA,Indian Iron & Steel Company Ltd.,Other/Private,Dhanbad,Jharkhand,Unknown,0999,Unclassified,1
+2017,2017-02-01,BAHREBAND U.G.PROJECT,South Eastern Coalfields Ltd.,ECL,Shahdol,Madhya Pradesh,Unknown,0111,Fall of Roof,3
+2017,2017-02-19,TAWA,Western Coalfields Ltd.,WCL,Betul,Madhya Pradesh,Unknown,0111,Fall of Roof,1
+2017,2017-07-06,RANI ATARI U/G MINE,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Underground,0111,Fall of Roof,1
+2017,2017-07-14,RAVINDRA KHANI NEW TECH,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2017,2017-11-24,TELWASA OC,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2017,2017-02-20,SARNI,Western Coalfields Ltd.,WCL,Betul,Madhya Pradesh,Unknown,0113,Fall of Overhangs,1
+2017,2017-08-06,SHYAMSUNDARPUR,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0113,Fall of Overhangs,1
+2017,2017-09-06,BEJDIH,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0113,Fall of Overhangs,1
+2017,2017-08-12,GODAVARI KHANI NO.7(LE)PROJECT,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0332,Rope Haulage,1
+2017,2017-08-19,RAVINDRA KHANI NO.5,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0332,Rope Haulage,1
+2017,2017-08-20,SRIRAMPUR NO.3 & 3 A,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0332,Rope Haulage,1
+2017,2017-09-21,PHULARITAND,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0332,Rope Haulage,1
+2017,2017-11-16,NARSAMODA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0332,Rope Haulage,1
+2017,2017-08-16,PAKRI BARWADIH COAL MINING PROJECT,NTPC LTD.,Other/Private,Hazaribagh,Jharkhand,Unknown,0334,Conveyors,1
+2017,2017-02-11,NIGAHI PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2017,2017-02-25,DAMAGORIA,Bharat Coking Coal Ltd.,BCCL,Burdwan,West Bengal,Unknown,0335,Dumpers,1
+2017,2017-03-21,SAMLESWARI OCP,Mahanadi Coalfields Ltd.,MCL,Jharsuguda,Orissa,Opencast,0335,Dumpers,1
+2017,2017-03-30,KANIHA OPENCAST PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0335,Dumpers,1
+2017,2017-05-29,NEYVELI NO 1,Neyveli Lignite Corporation Ltd.,Other/Private,Cuddalore,Tamil Nadu,Unknown,0335,Dumpers,1
+2017,2017-06-10,KHADIA PROJECT,Northern Coalfields Ltd.,NCL,Sonebhadra,Uttar Pradesh,Unknown,0335,Dumpers,1
+2017,2017-06-10,SONEPUR BAZARI PROJ.(KUMARKHALA O.C.P),Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0335,Dumpers,1
+2017,2017-06-23,RAMAGUNDAM OC-III,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0335,Dumpers,1
+2017,2017-08-02,DUDHICHUA PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2017,2017-12-06,BHUBANESWARI OPENCAST PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0335,Dumpers,1
+2017,2017-11-19,BHATGAON,South Eastern Coalfields Ltd.,ECL,Surguja,Chhattisgarh,Unknown,0336,Wagon Movements,1
+2017,2017-01-11,KANIHA OPENCAST PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-02-20,KHAS MAHAL PROJECT,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-02-23,RAMAGUNDAM OC-II,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-03-02,GAUTHAM KHANI O/C,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-04-05,BAROUD OCM,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-04-07,CHITRA,Eastern Coalfields Ltd.,ECL,Deoghar,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-05-21,ASHOK OPENCAST PROJECT,Central Coalfields Ltd.,CCL,Chatra,Jharkhand,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-07-02,MIC JHANJHRA PROJECT,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-10-21,DIPKA MINE NO.IA,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2017,2017-06-25,DHELWADIH PROJECT,South Eastern Coalfields Ltd.,ECL,Bilaspur,Chhattisgarh,Unknown,0441,Drilling Machines,1
+2017,2017-02-13,SAMLESWARI OCP,Mahanadi Coalfields Ltd.,MCL,Jharsuguda,Orissa,Opencast,0442,Cutting Machines,1
+2017,2017-12-03,GURHA(EAST) LIGNITE OPENCAST MINE,V S LIGNITE POWER PVT. LTD.,Other/Private,Bikaner,Rajasthan,Opencast,0446,"Shovel, Draglines, Frontend Loader, etc.",1
+2017,2017-04-18,MANUGURU OPENCAST MINE,Singareni Collieries Company Ltd.,SCCL,BHADRADRI KOTHAGUDEM,Telangana,Opencast,0447,Crushing & Screening Plants,2
+2017,2017-01-03,DUDHICHUA PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2017,2017-03-07,TETARIAKHAR OCP,Central Coalfields Ltd.,CCL,Palamau,Jharkhand,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2017,2017-05-09,GAUTHAM KHANI O/C,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2017,2017-05-21,MANUGURU OPENCAST MINE,Singareni Collieries Company Ltd.,SCCL,BHADRADRI KOTHAGUDEM,Telangana,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2017,2017-06-11,GOKUL O/C MINE,Western Coalfields Ltd.,WCL,Nagpur,Maharashtra,Unknown,0448,Other Heavy Earth Moving Machinery,2
+2017,2017-11-17,RAJMAHAL OCP,Eastern Coalfields Ltd.,ECL,Godda,Jharkhand,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2017,2017-04-05,BHURKUNDA MINE-A,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0551,Solid Blasting Projectiles,1
+2017,2017-03-18,NAWAPARA U/G PROJECT,South Eastern Coalfields Ltd.,ECL,Surguja,Chhattisgarh,Underground,0558,Blown Through Shots,1
+2017,2017-08-24,BONJAMEHARI,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0661,Overhead Lines,1
+2017,2017-04-19,"JHARKHAND OCP
+101",Central Coalfields Ltd.,CCL,Ramgarh,Jharkhand,Opencast,0669,Other Electrical Accidents,1
+2017,2017-05-04,CHIRIMIRI,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0779,Other Accidents due to Dust/Gas/Fire,1
+2017,2017-06-06,"GODAVARI KHANI NO.5
+102",Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0881,Fall of Person from Height/into Depth,1
+2017,2017-11-04,SAONER MINE NO.3,Western Coalfields Ltd.,WCL,Nagpur,Maharashtra,Unknown,0882,Fall of Persons on the Same Level,1
+2017,2017-03-12,SIDULI,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0883,Fall of Objects incl. Rolling Objects,1
+2017,2017-05-03,RAVINDRA KHANI NO.8,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0883,Fall of Objects incl. Rolling Objects,1
+2017,2017-08-16,"SAYAL ""D""
+104",Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0991,Irruption of Water,2
+2017,2017-07-25,KUARDIH,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0993,Drowning in Water,1
+2017,2017-02-26,CHURI,Central Coalfields Ltd.,CCL,Ranchi,Jharkhand,Unknown,0999,Unclassified,1
+2018,2018-10-07,KHOTTADIH,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0111,Fall of Roof,2
+2018,2018-10-25,NAHERIYA UG MINE,Western Coalfields Ltd.,WCL,Chhindwara,Madhya Pradesh,Underground,0111,Fall of Roof,4
+2018,2018-11-23,KUMDA 7&8 INCLIE,South Eastern Coalfields Ltd.,ECL,Surajpur,Chhattisgarh,Unknown,0111,Fall of Roof,2
+2018,2018-01-13,VIJAY WEST U/G MINE,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Underground,0112,Fall of Sides (Other than Overhangs),1
+2018,2018-11-09,ROCP/SOUTH JHARIA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0113,Fall of Overhangs,3
+2018,2018-06-24,VENKATESH KHANI NO.7,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Unknown,0332,Rope Haulage,1
+2018,2018-12-21,DHORI KHAS,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Unknown,0332,Rope Haulage,1
+2018,2018-11-08,HIRAKHAND BUNDIA MINE,Mahanadi Coalfields Ltd.,MCL,Jharsuguda,Orissa,Unknown,0334,Conveyors,1
+2018,2018-02-08,SAMLESWARI OCP,Mahanadi Coalfields Ltd.,MCL,Jharsuguda,Orissa,Opencast,0335,Dumpers,1
+2018,2018-03-07,GEVRA PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0335,Dumpers,1
+2018,2018-03-09,SRIRAMPUR OCP-I,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Opencast,0335,Dumpers,1
+2018,2018-05-06,VALIA LIGNITE MINE,Gujarat Industries Power Company Limited,Other/Private,Bharuch,Gujarat,Unknown,0335,Dumpers,2
+2018,2018-07-12,"KUSMUNDA OCP
+125",South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0335,Dumpers,1
+2018,2018-08-23,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0335,Dumpers,1
+2018,2018-09-27,BINA PROJECT,Northern Coalfields Ltd.,NCL,Sonebhadra,Uttar Pradesh,Unknown,0335,Dumpers,1
+2018,2018-11-13,NIGAHI PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2018,2018-12-13,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0335,Dumpers,1
+2018,2018-12-26,PHULARITAND,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0335,Dumpers,1
+2018,2018-01-22,MANUGURU OPENCAST MINE,Singareni Collieries Company Ltd.,SCCL,BHADRADRI KOTHAGUDEM,Telangana,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2018,2018-01-24,GEVRA PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2018,2018-05-02,KANCHAN O/C,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2018,2018-05-28,KAKATIYAKHANI OPENCAST SECTOR-I PROJECT,Singareni Collieries Company Ltd.,SCCL,Warangal,Telangana,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2018,2018-09-03,KULDA OPENCAST MINE,Mahanadi Coalfields Ltd.,MCL,Sundergarh,Orissa,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2018,2018-01-05,DUDHICHUA PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0441,Drilling Machines,1
+2018,2018-09-02,KOYAGUDEM OCP- I,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Opencast,0441,Drilling Machines,1
+2018,2018-11-28,MOHER & MOHER AMLOHRI EXTENSION OCP,M/S SASAN POWER LTD.,Other/Private,Singrauli,Madhya Pradesh,Opencast,0441,Drilling Machines,1
+2018,2018-01-04,AMALGAMATED SUDAMDIH PATHERDIH COAL MINE,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0443,Loading Machines,1
+2018,2018-10-17,JHIRIA U.G. MINE,South Eastern Coalfields Ltd.,ECL,Anuppur,Madhya Pradesh,Unknown,0443,Loading Machines,1
+2018,2018-10-23,KHAIRAGURA OC,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0446,"Shovel, Draglines, Frontend Loader, etc.",1
+2018,2018-03-24,JAGANNATH,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0447,Crushing & Screening Plants,1
+2018,2018-07-21,TAPIN NORTH,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0448,Other Heavy Earth Moving Machinery,4
+2018,2018-11-23,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2018,2018-11-24,AMRAPALLI OCP,Central Coalfields Ltd.,CCL,Chatra,Jharkhand,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2018,2018-11-23,KULDA OPENCAST MINE,Mahanadi Coalfields Ltd.,MCL,Sundergarh,Orissa,Opencast,0552,Deep Hole Blasting Projectiles,1
+2018,2018-02-02,MANIKPUR OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0555,Misfires/Sockets(While Drilling into),1
+2018,2018-07-31,PINDRA,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0661,Overhead Lines,1
+2018,2018-08-15,KUYA COLLIERY,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Underground,0661,Overhead Lines,1
+2018,2018-10-31,LINGARAJ OCP,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0661,Overhead Lines,1
+2018,2018-09-10,GEVRA PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0663,"Switch Gears,Gate End Boxes,Pommel,etc.",1
+2018,2018-09-14,DHORI KHAS,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Unknown,0664,Energized Machines,1
+2018,2018-05-05,DUDHICHUA PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0779,Other Accidents due to Dust/Gas/Fire,1
+2018,2018-12-16,BAGDEWA U/G MINE,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Underground,0779,Other Accidents due to Dust/Gas/Fire,3
+2018,2018-02-10,GOURI EXPANSION AMALGAMATED MINE,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0881,Fall of Person from Height/into Depth,1
+2018,2018-08-24,BHARATPUR PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0881,Fall of Person from Height/into Depth,1
+2018,2018-11-01,VENKATESH KHANI NO.7,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Unknown,0881,Fall of Person from Height/into Depth,1
+2018,2018-12-26,KAKATIYA KHANI NO 1 &1A INCLINE,Singareni Collieries Company Ltd.,SCCL,Warangal,Telangana,Underground,0991,Irruption of Water,1
+2018,2018-03-02,NEYVELI NO 2,Neyveli Lignite Corporation Ltd.,Other/Private,Cuddalore,Tamil Nadu,Unknown,0993,Drowning in Water,1
+2018,2018-09-01,GARJANBAHAL OCP MINE,Mahanadi Coalfields Ltd.,MCL,Sundergarh,Orissa,Opencast,0993,Drowning in Water,1
+2018,2018-10-01,MAHAKALI,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0999,Unclassified,1
+2019,2019-06-04,RAVINDRA KHANI NO.5,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0111,Fall of Roof,1
+2019,2019-08-20,JHILIMILI,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0111,Fall of Roof,2
+2019,2019-06-20,NOONODIH JITPUR,Indian Iron & Steel Company Ltd.,Other/Private,Dhanbad,Jharkhand,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2019,2019-08-29,GARE PALMA IV/1 COAL MINE,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2019,2019-06-14,KUNUSTORIA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0113,Fall of Overhangs,1
+2019,2019-08-02,BHELATAND AMALGAMATED,Tata Iron & Steel Co. Ltd.,Other/Private,Dhanbad,Jharkhand,Unknown,0113,Fall of Overhangs,1
+2019,2019-07-23,BHARATPUR PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0118,Landslide,4
+2019,2019-10-29,BHAGABAND,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0222,"Breakage of Rope,Chain,Craw/Suspn. Gear",1
+2019,2019-08-26,BASTACOLA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0223,"Falls of Persons from Cages, Skip etc.",1
+2019,2019-12-16,RAVINDRAKHANI NO.6 INCLINE MINE,Singareni Collieries Company Ltd.,SCCL,Kalaburagi(Formely-GULBERGA),Telangana,Underground,0332,Rope Haulage,1
+2019,2019-05-21,KHAIRAGURA OC,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0334,Conveyors,1
+2019,2019-09-30,ROCP/SOUTH JHARIA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0334,Conveyors,1
+2019,2019-01-25,AMALGAMATED BLOCK II OCP,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0335,Dumpers,1
+2019,2019-02-01,"NIGAHI PROJECT
+Time - . 5 Owner - Northern Coalfields Ltd.
+Dist. - Singrauli, State - Madhya Pradesh
+Person(s) Killed :
+1. S.S. Shah, Cont. Employee, Male, 26 Years
+While an 18.8 m3 empty tipper was on way to loading face it crashed into right side
+dump body of OB loaded tipper coming from the opposite direction at haul road
+junction thus punctured the fuel tank of loaded tipper resulting in diesel spill
+out to catch fire in both the tippers and empty tipper driver unable to escape as
+was being entrapped in damaged cabin was burned to death.
+Had,
+the empty tipper not been driven unmindfully without paying attention to signals
+like horn & dipper given by driver of loaded tipper coming from opposite direction
+to crash into it, thus not negligently endangering his own life and safety of
+persons employed in the mine, as called for by the provisions of Regulation 239 of
+the Coal Mines Regulations, 2017,
+this accident could have been averted.
+15. Date - 11.02.19 Mine - GARE PALMA IV/4 COAL MINE",M/S HINDALCO INDUSTIES LTD.,Other/Private,Raigarh,Chhattisgarh,Unknown,0335,Dumpers,1
+2019,2019-06-04,BARSINGAR LIGNITE MINE,Neyveli Lignite Corporation Ltd.,Other/Private,Bikaner,Rajasthan,Unknown,0335,Dumpers,1
+2019,2019-11-11,RAMAGUNDAM OC-III,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0335,Dumpers,1
+2019,2019-12-12,NEW AKASHKINAREE COLLIERY,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Underground,0335,Dumpers,1
+2019,2019-02-04,RAVINDRA KHANI NO.1A,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0336,Wagon Movements,1
+2019,2019-11-23,RAJNAGAR R.O.,South Eastern Coalfields Ltd.,ECL,Anuppur,Madhya Pradesh,Unknown,0336,Wagon Movements,1
+2019,2019-01-09,RAMAGUNDAM OC-III,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2019,2019-01-29,KRISHNASHILA OCP,Northern Coalfields Ltd.,NCL,Sonebhadra,Uttar Pradesh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2019,2019-04-03,AMERA OC MINE,South Eastern Coalfields Ltd.,ECL,Surguja,Chhattisgarh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2019,2019-04-26,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2019,2019-05-28,BALRAM OCP,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2019,2019-12-20,ANANTA O/C,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2019,2019-02-04,KHOTTADIH,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0443,Loading Machines,1
+2019,2019-05-22,MUDIDIH,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0443,Loading Machines,1
+2019,2019-02-09,KALIPAHARI,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2019,2019-02-23,MAGADH OCP,Central Coalfields Ltd.,CCL,Chatra,Jharkhand,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2019,2019-03-14,BALRAM OCP,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2019,2019-08-31,BALRAM OCP,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2019,2019-10-26,CHOTIA II OC COAL MINE,BHARAT ALLUMINIUM CO. LTD.,Other/Private,Korba,Chhattisgarh,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2019,2019-06-11,MUNGOLI O.C,Western Coalfields Ltd.,WCL,Yavatmal,Maharashtra,Unknown,0449,Other Non-Transportation Machinery,1
+2019,2019-09-12,AMALGAMATED KESHALPUR-WEST MUDIDIH,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0552,Deep Hole Blasting Projectiles,1
+2019,2019-06-20,BHUBANESWARI OPENCAST PROJECT,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0661,Overhead Lines,1
+2019,2019-04-30,SATGRAM PROJECT,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0663,"Switch Gears,Gate End Boxes,Pommel,etc.",1
+2019,2019-03-25,BINA PROJECT,Northern Coalfields Ltd.,NCL,Sonebhadra,Uttar Pradesh,Unknown,0881,Fall of Person from Height/into Depth,1
+2019,2019-05-08,CENTRAL KAJORA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0881,Fall of Person from Height/into Depth,1
+2019,2019-08-08,DHANPURI OPENCAST MINE,South Eastern Coalfields Ltd.,ECL,Shahdol,Madhya Pradesh,Opencast,0881,Fall of Person from Height/into Depth,1
+2019,2019-08-11,KHAS KAJORA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0881,Fall of Person from Height/into Depth,1
+2019,2019-03-21,MIC JHANJHRA PROJECT,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0882,Fall of Persons on the Same Level,1
+2019,2019-02-21,GARJANBAHAL OCP MINE,Mahanadi Coalfields Ltd.,MCL,Sundergarh,Orissa,Opencast,0883,Fall of Objects incl. Rolling Objects,1
+2019,2019-05-02,GODAVARI KHANI NO.11 INCLINE MINE,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Underground,0883,Fall of Objects incl. Rolling Objects,1
+2019,2019-11-09,BAHULA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0883,Fall of Objects incl. Rolling Objects,1
+2019,2019-01-30,NEYVELI NO 1,Neyveli Lignite Corporation Ltd.,Other/Private,Cuddalore,Tamil Nadu,Unknown,0993,Drowning in Water,1
+2019,2019-11-26,MAHAKALI,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0994,"Buried in Sands, etc.",1
+2019,2019-01-14,BHURKUNDA MINE-B,Central Coalfields Ltd.,CCL,Ramgarh,Jharkhand,Unknown,0999,Unclassified,1
+2019,2019-01-31,SINGHALI PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0999,Unclassified,1
+2019,2019-07-18,KUMBHARKHANI U/G,Western Coalfields Ltd.,WCL,Yavatmal,Maharashtra,Underground,0999,Unclassified,2
+2019,2019-12-26,ADRIYALA LONGWALL PROJECT,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0999,Unclassified,1
+2020,2020-08-20,NANDIRA,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0111,Fall of Roof,1
+2020,2020-10-15,TAWA,Western Coalfields Ltd.,WCL,Betul,Madhya Pradesh,Unknown,0111,Fall of Roof,1
+2020,2020-10-29,VAKILPALLI,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0111,Fall of Roof,1
+2020,2020-11-21,CHURCHA,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0111,Fall of Roof,1
+2020,2020-05-25,PARASCOLE WEST,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2020,2020-06-18,MAHAKALI,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2020,2020-10-27,PARASCOLE EAST,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2020,2020-02-24,CHAPUIKHAS,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0113,Fall of Overhangs,1
+2020,2020-03-25,NEW KENDA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0332,Rope Haulage,1
+2020,2020-05-30,CHURCHA,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0334,Conveyors,1
+2020,2020-01-24,AMALGAMATED RAMAKRISHNAPUR OCP,Singareni Collieries Company Ltd.,SCCL,Mancherial,Telangana,Opencast,0335,Dumpers,1
+2020,2020-05-03,ANANTA O/C,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0335,Dumpers,1
+2020,2020-05-29,ROCP/SOUTH JHARIA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0335,Dumpers,1
+2020,2020-07-13,"BLOCK ""B"" PROJECT",Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2020,2020-07-20,DUDHICHUA PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2020,2020-11-14,MOHER & MOHER AMLOHRI EXTENSION OCP,M/S SASAN POWER LTD.,Other/Private,Singrauli,Madhya Pradesh,Opencast,0335,Dumpers,2
+2020,2020-12-19,ROCP/SOUTH JHARIA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0335,Dumpers,1
+2020,2020-01-22,BONJAMEHARI,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-04-05,KALYANI KHANI OCP,Singareni Collieries Company Ltd.,SCCL,Kalaburagi(Formely-GULBERGA),Telangana,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-04-30,LAKHANPUR OPEN-CAST,Mahanadi Coalfields Ltd.,MCL,Jharsuguda,Orissa,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-05-02,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-07-30,GEVRA PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-11-05,ENA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-11-30,CHHAAL OPEN CAST,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-12-02,UKNI O.C,Western Coalfields Ltd.,WCL,Yavatmal,Maharashtra,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2020,2020-05-05,HINGULA OPENCAST MINE,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0441,Drilling Machines,1
+2020,2020-12-19,RAJRAPPA PROJECT,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0441,Drilling Machines,1
+2020,2020-02-13,JAMPALLI O/C MINE,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2020,2020-09-14,JAMPALLI O/C MINE,South Eastern Coalfields Ltd.,ECL,Raigarh,Chhattisgarh,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2020,2020-10-15,GEVRA PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2020,2020-10-18,BHATADI O.C,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0449,Other Non-Transportation Machinery,1
+2020,2020-12-02,GEVRA PROJECT,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0449,Other Non-Transportation Machinery,1
+2020,2020-06-02,RAMAGUNDAM OC-I,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0553,Secondary Blasting Projectiles,4
+2020,2020-06-24,KURASIA COLLIERY,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Underground,0555,Misfires/Sockets(While Drilling into),1
+2020,2020-09-02,RAVINDRA KHANI NO.5,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0555,Misfires/Sockets(While Drilling into),1
+2020,2020-03-21,LINGARAJ OCP,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Opencast,0661,Overhead Lines,1
+2020,2020-04-30,ADRIYALA LONGWALL PROJECT,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0881,Fall of Person from Height/into Depth,1
+2020,2020-05-12,AMALGAMATED AMLO-DHORI OCM,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Opencast,0881,Fall of Person from Height/into Depth,1
+2020,2020-05-22,CHASNALLA,Indian Iron & Steel Company Ltd.,Other/Private,Dhanbad,Jharkhand,Unknown,0881,Fall of Person from Height/into Depth,1
+2020,2020-07-06,RAMAGUNDAM OC-II,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0881,Fall of Person from Height/into Depth,1
+2020,2020-12-20,DIPKA MINE NO.IA,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0881,Fall of Person from Height/into Depth,1
+2020,2020-05-22,MAKARDHOKRA MINE NO.I,Western Coalfields Ltd.,WCL,Nagpur,Maharashtra,Unknown,0883,Fall of Objects incl. Rolling Objects,1
+2020,2020-12-08,KHOODIA,Eastern Coalfields Ltd.,ECL,Dhanbad,Jharkhand,Unknown,0991,Irruption of Water,2
+2020,2020-01-11,SODEPUR,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0993,Drowning in Water,1
+2020,2020-07-05,INDARAM KHANI NO.1A MINE,Singareni Collieries Company Ltd.,SCCL,Mancherial,Telangana,Unknown,0993,Drowning in Water,1
+2020,2020-07-21,MOONIDIH PROJECT,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0993,Drowning in Water,1
+2020,2020-07-23,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0993,Drowning in Water,1
+2020,2020-04-07,GODAVARI KHANI NO.11 INCLINE MINE,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Underground,0999,Unclassified,1
+2021,2021-03-05,SIAL GHOGRI COAL MINE,M/S RCCPL PVT. LTD.,Other/Private,Chhindwara,Madhya Pradesh,Unknown,0111,Fall of Roof,1
+2021,2021-03-20,NARSAMODA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0111,Fall of Roof,1
+2021,2021-04-07,KAKATIYA KHANI NO.6 INCLINE,Singareni Collieries Company Ltd.,SCCL,Warangal,Telangana,Underground,0111,Fall of Roof,2
+2021,2021-04-15,DHELWADIH PROJECT,South Eastern Coalfields Ltd.,ECL,Bilaspur,Chhattisgarh,Unknown,0111,Fall of Roof,1
+2021,2021-08-16,DHEMOMAIN PIT,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0111,Fall of Roof,1
+2021,2021-11-10,SRIRAMPUR NO.3 & 3 A,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0111,Fall of Roof,4
+2021,2021-01-13,BHOWRA(SOUTH),Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2021,2021-02-23,MOONIDIH PROJECT,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0112,Fall of Sides (Other than Overhangs),2
+2021,2021-12-02,MOHAN,Western Coalfields Ltd.,WCL,Chhindwara,Madhya Pradesh,Unknown,0112,Fall of Sides (Other than Overhangs),1
+2021,2021-12-31,NEW KENDA,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0117,Subsidence,1
+2021,2021-08-22,CHORA BLOCK INCLINE,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Underground,0332,Rope Haulage,1
+2021,2021-04-02,ANANTA O/C,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0333,Other Rail Transportation,1
+2021,2021-03-27,WEST BOKARO O/C(QUARRY SE),Tata Iron & Steel Co. Ltd.,Other/Private,Ramgarh,Jharkhand,Opencast,0334,Conveyors,1
+2021,2021-02-16,SASTI OC,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0335,Dumpers,1
+2021,2021-04-06,DUDHICHUA PROJECT,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Unknown,0335,Dumpers,1
+2021,2021-06-23,SONEPUR BAZARI PROJ.(KUMARKHALA O.C.P),Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0335,Dumpers,2
+2021,2021-09-19,PAKRI BARWADIH COAL MINING PROJECT,NTPC LTD.,Other/Private,Hazaribagh,Jharkhand,Unknown,0335,Dumpers,1
+2021,2021-02-13,NICHITPUR,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2021,2021-03-08,MIC JHANJHRA PROJECT,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2021,2021-04-21,BINA PROJECT,Northern Coalfields Ltd.,NCL,Sonebhadra,Uttar Pradesh,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2021,2021-06-03,MANUGURU OPENCAST MINE,Singareni Collieries Company Ltd.,SCCL,BHADRADRI KOTHAGUDEM,Telangana,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2021,2021-08-18,PRAKASHAM KHANI OPENCAST MINE,Singareni Collieries Company Ltd.,SCCL,Khammam,Telangana,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",3
+2021,2021-09-19,SONEPUR BAZARI PROJ.(KUMARKHALA O.C.P),Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2021,2021-10-20,AMLOHRI OCP,Northern Coalfields Ltd.,NCL,Singrauli,Madhya Pradesh,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2021,2021-02-05,PENGANGA OC MINE,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Opencast,0446,"Shovel, Draglines, Frontend Loader, etc.",1
+2021,2021-03-04,DIPKA MINE NO.IA,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0446,"Shovel, Draglines, Frontend Loader, etc.",1
+2021,2021-10-29,PENGANGA OC MINE,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Opencast,0446,"Shovel, Draglines, Frontend Loader, etc.",1
+2021,2021-10-05,GANGARAMCHAK & GANGARAMCHAK BHADULIA,WEST BENGAL POWER DEVELOMPENT CORP. LTD.,Other/Private,Birbhum,West Bengal,Unknown,0448,Other Heavy Earth Moving Machinery,1
+2021,2021-08-28,BOKARO,Central Coalfields Ltd.,CCL,Bokaro,Jharkhand,Unknown,0552,Deep Hole Blasting Projectiles,1
+2021,2021-12-30,"RAJNAGAR R.O.
+249",South Eastern Coalfields Ltd.,ECL,Anuppur,Madhya Pradesh,Unknown,0559,Other Explosive Accidents,1
+2021,2021-07-16,JAGANNATH,Mahanadi Coalfields Ltd.,MCL,Angul,Orissa,Unknown,0661,Overhead Lines,1
+2021,2021-12-26,CHURCHA,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0663,"Switch Gears,Gate End Boxes,Pommel,etc.",1
+2021,2021-03-15,TOPA OC,Central Coalfields Ltd.,CCL,Ramgarh,Jharkhand,Unknown,0669,Other Electrical Accidents,1
+2021,2021-11-28,SURAKACHAR 3&4,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0881,Fall of Person from Height/into Depth,1
+2021,2021-03-17,VINDHYA PROJECT,South Eastern Coalfields Ltd.,ECL,Umaria,Madhya Pradesh,Unknown,0882,Fall of Persons on the Same Level,1
+2021,2021-07-04,CHURCHA,South Eastern Coalfields Ltd.,ECL,Korea,Chhattisgarh,Unknown,0882,Fall of Persons on the Same Level,1
+2021,2021-12-01,RAMAGUNDAM OC-II,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0882,Fall of Persons on the Same Level,1
+2021,2021-05-19,TAWA - II MINE,Western Coalfields Ltd.,WCL,Betul,Madhya Pradesh,Unknown,0883,Fall of Objects incl. Rolling Objects,1
+2021,2021-11-19,KALYANI KHANI OCP,Singareni Collieries Company Ltd.,SCCL,Kalaburagi(Formely-GULBERGA),Telangana,Opencast,0883,Fall of Objects incl. Rolling Objects,1
+2021,2021-04-03,PAUNI O.C,Western Coalfields Ltd.,WCL,Chandrapur,Maharashtra,Unknown,0993,Drowning in Water,1
+2021,2021-07-31,NIMCHA (R),Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0993,Drowning in Water,6
+2021,2021-03-01,CHORA 7 & 9 PIT COLLIERY,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Underground,0999,Unclassified,1
+2021,2021-12-22,RAMAGUNDAM OC-I,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0999,Unclassified,1
+2022,2022-02-17,JAYKAYNAGAR,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Unknown,0111,Fall of Roof,1
+2022,2022-05-13,TAWA,Western Coalfields Ltd.,WCL,Betul,Madhya Pradesh,Unknown,0111,Fall of Roof,2
+2022,2022-09-18,SATGRAM INCLINE,Eastern Coalfields Ltd.,ECL,Burdwan,West Bengal,Underground,0111,Fall of Roof,1
+2022,2022-11-16,KURJA UG PROJECT,South Eastern Coalfields Ltd.,ECL,Shahdol,Madhya Pradesh,Underground,0111,Fall of Roof,1
+2022,2022-02-20,ROCP/SOUTH JHARIA,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Opencast,0112,Fall of Sides (Other than Overhangs),1
+2022,2022-03-07,ADRIYALA LONGWALL PROJECT,Singareni Collieries Company Ltd.,SCCL,Karimnagar,Telangana,Unknown,0112,Fall of Sides (Other than Overhangs),3
+2022,2022-08-11,BHOWRA(SOUTH),Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Unknown,0112,Fall of Sides (Other than Overhangs),2
+2022,2022-09-08,SRIRAMPUR NO.1,Singareni Collieries Company Ltd.,SCCL,Adilabad,Telangana,Unknown,0332,Rope Haulage,1
+2022,2022-10-08,KUSMUNDA OCP,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Opencast,0335,Dumpers,1
+2022,2022-02-15,URIMARI PROJECT,Central Coalfields Ltd.,CCL,Hazaribagh,Jharkhand,Unknown,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2022,2022-02-25,ASHOK OPENCAST PROJECT,Central Coalfields Ltd.,CCL,Chatra,Jharkhand,Opencast,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2022,2022-12-31,AMALGAMATED DHANSAR INDUSTRY COLLIERY,Bharat Coking Coal Ltd.,BCCL,Dhanbad,Jharkhand,Underground,0339,"Wheeled Trackless(Truck,Tanker,etc.)",1
+2022,2022-11-30,BANGWAR U/G PROJECT,South Eastern Coalfields Ltd.,ECL,Shahdol,Madhya Pradesh,Underground,0442,Cutting Machines,1
+2022,2022-06-18,RK OCP MINE,Singareni Collieries Company Ltd.,SCCL,Kalaburagi(Formely-GULBERGA),Telangana,Opencast,0448,Other Heavy Earth Moving Machinery,1
+2022,2022-09-29,DIPKA MINE NO.IA,South Eastern Coalfields Ltd.,ECL,Korba,Chhattisgarh,Unknown,0448,Other Heavy Earth Moving Machinery,1

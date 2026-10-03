@@ -1,0 +1,171 @@
+year,cause_category,cause,accidents,fatalities
+2013,Ground Movement,Fall of Roof,8,13
+2014,Ground Movement,Fall of Roof,10,11
+2015,Ground Movement,Fall of Roof,4,4
+2016,Ground Movement,Fall of Roof,8,11
+2017,Ground Movement,Fall of Roof,3,5
+2018,Ground Movement,Fall of Roof,3,8
+2019,Ground Movement,Fall of Roof,2,3
+2020,Ground Movement,Fall of Roof,4,4
+2021,Ground Movement,Fall of Roof,6,10
+2022,Ground Movement,Fall of Roof,4,5
+2013,Ground Movement,Fall of Sides,2,2
+2014,Ground Movement,Fall of Sides,2,2
+2015,Ground Movement,Fall of Sides,5,5
+2016,Ground Movement,Fall of Sides,5,5
+2017,Ground Movement,Fall of Sides,5,5
+2018,Ground Movement,Fall of Sides,2,4
+2019,Ground Movement,Fall of Sides,4,4
+2020,Ground Movement,Fall of Sides,4,4
+2021,Ground Movement,Fall of Sides,3,4
+2022,Ground Movement,Fall of Sides,3,6
+2013,Ground Movement,Other Ground Movement,2,2
+2014,Ground Movement,Other Ground Movement,1,2
+2015,Ground Movement,Other Ground Movement,0,0
+2016,Ground Movement,Other Ground Movement,1,23
+2017,Ground Movement,Other Ground Movement,0,0
+2018,Ground Movement,Other Ground Movement,0,0
+2019,Ground Movement,Other Ground Movement,1,4
+2020,Ground Movement,Other Ground Movement,0,0
+2021,Ground Movement,Other Ground Movement,1,1
+2022,Ground Movement,Other Ground Movement,0,0
+2013,Transportation (Winding),Winding in Shaft,0,0
+2014,Transportation (Winding),Winding in Shaft,0,0
+2015,Transportation (Winding),Winding in Shaft,0,0
+2016,Transportation (Winding),Winding in Shaft,1,1
+2017,Transportation (Winding),Winding in Shaft,0,0
+2018,Transportation (Winding),Winding in Shaft,0,0
+2019,Transportation (Winding),Winding in Shaft,2,2
+2020,Transportation (Winding),Winding in Shaft,0,0
+2021,Transportation (Winding),Winding in Shaft,0,0
+2022,Transportation (Winding),Winding in Shaft,0,0
+2013,Transportation (Non-Winding),Rope Haulage,3,3
+2014,Transportation (Non-Winding),Rope Haulage,1,1
+2015,Transportation (Non-Winding),Rope Haulage,3,3
+2016,Transportation (Non-Winding),Rope Haulage,5,5
+2017,Transportation (Non-Winding),Rope Haulage,5,5
+2018,Transportation (Non-Winding),Rope Haulage,2,2
+2019,Transportation (Non-Winding),Rope Haulage,1,1
+2020,Transportation (Non-Winding),Rope Haulage,1,1
+2021,Transportation (Non-Winding),Rope Haulage,1,1
+2022,Transportation (Non-Winding),Rope Haulage,1,1
+2013,Transportation (Non-Winding),Wheeled Trackless,29,29
+2014,Transportation (Non-Winding),Wheeled Trackless,17,18
+2015,Transportation (Non-Winding),Wheeled Trackless,16,17
+2016,Transportation (Non-Winding),Wheeled Trackless,20,21
+2017,Transportation (Non-Winding),Wheeled Trackless,19,19
+2018,Transportation (Non-Winding),Wheeled Trackless,15,16
+2019,Transportation (Non-Winding),Wheeled Trackless,12,12
+2020,Transportation (Non-Winding),Wheeled Trackless,15,16
+2021,Transportation (Non-Winding),Wheeled Trackless,11,14
+2022,Transportation (Non-Winding),Wheeled Trackless,4,4
+2013,Transportation (Non-Winding),Other Transport Machinery,1,1
+2014,Transportation (Non-Winding),Other Transport Machinery,1,1
+2015,Transportation (Non-Winding),Other Transport Machinery,0,0
+2016,Transportation (Non-Winding),Other Transport Machinery,3,3
+2017,Transportation (Non-Winding),Other Transport Machinery,2,2
+2018,Transportation (Non-Winding),Other Transport Machinery,1,1
+2019,Transportation (Non-Winding),Other Transport Machinery,4,4
+2020,Transportation (Non-Winding),Other Transport Machinery,1,1
+2021,Transportation (Non-Winding),Other Transport Machinery,2,2
+2022,Transportation (Non-Winding),Other Transport Machinery,0,0
+2013,Non-Transport Machinery,Non-Transport Machinery,12,12
+2014,Non-Transport Machinery,Non-Transport Machinery,15,15
+2015,Non-Transport Machinery,Non-Transport Machinery,11,11
+2016,Non-Transport Machinery,Non-Transport Machinery,9,9
+2017,Non-Transport Machinery,Non-Transport Machinery,10,12
+2018,Non-Transport Machinery,Non-Transport Machinery,10,13
+2019,Non-Transport Machinery,Non-Transport Machinery,8,8
+2020,Non-Transport Machinery,Non-Transport Machinery,7,7
+2021,Non-Transport Machinery,Non-Transport Machinery,4,4
+2022,Non-Transport Machinery,Non-Transport Machinery,3,3
+2013,Explosives,Explosives,0,0
+2014,Explosives,Explosives,2,2
+2015,Explosives,Explosives,0,0
+2016,Explosives,Explosives,0,0
+2017,Explosives,Explosives,2,2
+2018,Explosives,Explosives,2,2
+2019,Explosives,Explosives,1,1
+2020,Explosives,Explosives,3,6
+2021,Explosives,Explosives,2,2
+2022,Explosives,Explosives,0,0
+2013,Electricity,Electricity,7,7
+2014,Electricity,Electricity,2,2
+2015,Electricity,Electricity,4,4
+2016,Electricity,Electricity,2,2
+2017,Electricity,Electricity,2,2
+2018,Electricity,Electricity,5,5
+2019,Electricity,Electricity,2,2
+2020,Electricity,Electricity,1,1
+2021,Electricity,Electricity,3,3
+2022,Electricity,Electricity,1,1
+2013,Gas/Dust/Fire,Gas Dust Other Combustible,0,0
+2014,Gas/Dust/Fire,Gas Dust Other Combustible,1,1
+2015,Gas/Dust/Fire,Gas Dust Other Combustible,0,0
+2016,Gas/Dust/Fire,Gas Dust Other Combustible,4,5
+2017,Gas/Dust/Fire,Gas Dust Other Combustible,1,1
+2018,Gas/Dust/Fire,Gas Dust Other Combustible,2,4
+2019,Gas/Dust/Fire,Gas Dust Other Combustible,0,0
+2020,Gas/Dust/Fire,Gas Dust Other Combustible,0,0
+2021,Gas/Dust/Fire,Gas Dust Other Combustible,0,0
+2022,Gas/Dust/Fire,Gas Dust Other Combustible,2,2
+2013,Falls,Fall of Person,8,8
+2014,Falls,Fall of Person,2,2
+2015,Falls,Fall of Person,4,4
+2016,Falls,Fall of Person,4,4
+2017,Falls,Fall of Person,2,2
+2018,Falls,Fall of Person,3,3
+2019,Falls,Fall of Person,5,5
+2020,Falls,Fall of Person,5,5
+2021,Falls,Fall of Person,4,4
+2022,Falls,Fall of Person,3,3
+2013,Falls,Fall of Object,3,3
+2014,Falls,Fall of Object,2,2
+2015,Falls,Fall of Object,2,2
+2016,Falls,Fall of Object,2,2
+2017,Falls,Fall of Object,2,2
+2018,Falls,Fall of Object,0,0
+2019,Falls,Fall of Object,3,3
+2020,Falls,Fall of Object,1,1
+2021,Falls,Fall of Object,2,2
+2022,Falls,Fall of Object,2,2
+2013,Falls,Other Falls,2,2
+2014,Falls,Other Falls,0,0
+2015,Falls,Other Falls,0,0
+2016,Falls,Other Falls,0,0
+2017,Falls,Other Falls,0,0
+2018,Falls,Other Falls,0,0
+2019,Falls,Other Falls,0,0
+2020,Falls,Other Falls,0,0
+2021,Falls,Other Falls,0,0
+2022,Falls,Other Falls,0,0
+2013,Other,Irruption of Water,0,0
+2014,Other,Irruption of Water,0,0
+2015,Other,Irruption of Water,1,1
+2016,Other,Irruption of Water,0,0
+2017,Other,Irruption of Water,1,2
+2018,Other,Irruption of Water,1,1
+2019,Other,Irruption of Water,0,0
+2020,Other,Irruption of Water,1,2
+2021,Other,Irruption of Water,0,0
+2022,Other,Irruption of Water,0,0
+2013,Other,Flying Pieces,0,0
+2014,Other,Flying Pieces,0,0
+2015,Other,Flying Pieces,0,0
+2016,Other,Flying Pieces,0,0
+2017,Other,Flying Pieces,0,0
+2018,Other,Flying Pieces,0,0
+2019,Other,Flying Pieces,0,0
+2020,Other,Flying Pieces,0,0
+2021,Other,Flying Pieces,0,0
+2022,Other,Flying Pieces,0,0
+2013,Other,Miscellaneous,0,0
+2014,Other,Miscellaneous,3,3
+2015,Other,Miscellaneous,4,4
+2016,Other,Miscellaneous,3,3
+2017,Other,Miscellaneous,2,2
+2018,Other,Miscellaneous,3,3
+2019,Other,Miscellaneous,6,7
+2020,Other,Miscellaneous,5,5
+2021,Other,Miscellaneous,4,4
+2022,Other,Miscellaneous,1,1

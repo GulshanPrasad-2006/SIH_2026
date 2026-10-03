@@ -1,0 +1,10 @@
+Approach,Accuracy,Recall,Precision,F1,Balanced_Acc,ROC_AUC
+0. Always predict low risk (sanity floor),64.5,0.0,0.0,0.0,50.0,-
+"1. Random Forest, basic features",92.2,87.9,89.8,0.89,91.2,0.979
+"2. Random Forest, engineered features",92.5,91.1,88.2,0.9,92.2,0.978
+"3. Isolation Forest, naive",69.2,34.1,62.0,0.44,61.3,-
+"4. Isolation Forest, contamination matched",62.5,62.1,47.8,0.54,62.4,-
+5. Isolation Forest fit ONLY on normal rows,78.4,83.9,65.3,0.73,79.7,0.881
+6. Hybrid: Engineered + IF Anomaly -> RF (0.50 threshold),92.3,90.0,88.6,0.89,91.8,0.978
+7. Hybrid: Engineered + IF Anomaly -> Gradient Boosting,92.8,89.2,90.3,0.9,92.0,0.98
+"8. Hybrid: Engineered + IF -> RF, Tuned Threshold (0.45)",92.7,92.3,87.8,0.9,92.6,0.978

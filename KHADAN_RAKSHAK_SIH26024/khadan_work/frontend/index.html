@@ -1,0 +1,2093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f2e5d" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.svg" type="image/svg+xml" />
+  <title>KHADAN RAKSHAK | AI-Based Smart Compliance & Governance System - Ministry of Coal</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Chart.js for Dashboard Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Modular Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- ========================================================= -->
+  <!-- TOP STATUTORY ACCESSIBILITY BAR -->
+  <!-- ========================================================= -->
+  <header class="bg-slate-900 text-slate-200 text-xs py-1 px-4 border-b border-slate-700">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="font-semibold text-amber-400"><i class="fa-solid fa-landmark mr-1"></i> भारत सरकार | GOVERNMENT OF INDIA</span>
+        <span class="hidden sm:inline text-slate-400">|</span>
+        <span class="hidden sm:inline">कोयला मंत्रालय | MINISTRY OF COAL</span>
+        <span class="hidden md:inline text-slate-400">|</span>
+        <span class="hidden md:inline text-emerald-400 font-mono text-[11px]"><i class="fa-solid fa-shield-halved mr-1"></i> DGMS STATUTORY COMPLIANCE PORTAL</span>
+      </div>
+      <div class="flex items-center space-x-4 text-[11px]">
+        <span id="live-ist-clock" class="font-mono text-slate-300">02-Sep-2026 | 22:45:00 IST</span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span class="bg-slate-800 px-2 py-0.5 rounded border border-slate-600 text-amber-300 font-mono">SIH-26024</span>
+        <span class="hidden sm:inline text-slate-500">|</span>
+        <span id="network-status" class="network-online rounded px-2 py-0.5 font-semibold" aria-live="polite">Online</span>
+        <span id="offline-queue-count" class="hidden rounded bg-amber-500 text-slate-950 px-2 py-0.5 font-semibold" aria-live="polite">0 pending sync</span>
+        <label class="flex items-center gap-1.5 font-semibold" title="Choose website language / वेबसाइट की भाषा चुनें">
+          <span class="text-slate-400">Language / भाषा</span>
+          <select id="language-selector" onchange="setLanguage(this.value)" class="bg-slate-800 border border-slate-600 text-slate-100 rounded px-2 py-1 text-[11px] font-semibold cursor-pointer focus:outline-none focus:ring-1 focus:ring-amber-400">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRICOLOR ACCENT BAR -->
+  <div class="gov-tricolor"></div>
+
+  <!-- ========================================================= -->
+  <!-- OFFICIAL GOV PORTAL HEADER -->
+  <!-- ========================================================= -->
+  <div class="gov-header-bg text-white py-3.5 px-4 shadow-md border-b-2 border-amber-500">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center space-x-4">
+        <!-- Flag of India -->
+        <div class="w-13 h-13 bg-white rounded-full p-1 flex items-center justify-center shadow-lg border-2 border-amber-400 flex-shrink-0 overflow-hidden">
+          <svg viewBox="0 0 120 80" class="w-11 h-11" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="120" height="80" fill="#fff"/>
+            <rect x="0" y="0" width="120" height="26.67" fill="#FF9933"/>
+            <rect x="0" y="26.67" width="120" height="26.67" fill="#fff"/>
+            <rect x="0" y="53.33" width="120" height="26.67" fill="#138808"/>
+            <circle cx="60" cy="40" r="11" fill="none" stroke="#000080" stroke-width="1.4"/>
+            <circle cx="60" cy="40" r="1.6" fill="#000080"/>
+            <g stroke="#000080" stroke-width="0.7">
+              <line x1="60" y1="29" x2="60" y2="51"/>
+              <line x1="49" y1="40" x2="71" y2="40"/>
+              <line x1="52.2" y1="31.2" x2="67.8" y2="48.8"/>
+              <line x1="52.2" y1="48.8" x2="67.8" y2="31.2"/>
+              <line x1="55.5" y1="29.9" x2="64.5" y2="50.1"/>
+              <line x1="64.5" y1="29.9" x2="55.5" y2="50.1"/>
+              <line x1="50.1" y1="34.5" x2="69.9" y2="45.5"/>
+              <line x1="50.1" y1="45.5" x2="69.9" y2="34.5"/>
+              <line x1="49.3" y1="37.2" x2="70.7" y2="42.8"/>
+              <line x1="49.3" y1="42.8" x2="70.7" y2="37.2"/>
+              <line x1="53.7" y1="30.4" x2="66.3" y2="49.6"/>
+              <line x1="66.3" y1="30.4" x2="53.7" y2="49.6"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="flex items-center space-x-2">
+            <h1 class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+              KHADAN RAKSHAK <span class="text-xs bg-amber-500 text-slate-950 font-bold px-2 py-0.5 rounded uppercase tracking-wider">खदान रक्षक</span>
+            </h1>
+          </div>
+          <p class="text-xs text-blue-100 font-medium">
+            AI-Based Smart Governance and Statutory Compliance Monitoring System for Coal Mines
+          </p>
+          <p class="text-[11px] text-amber-300 font-mono">
+            Form IV & Form VII Regulatory Workflow • Directorate General of Mines Safety (DGMS)
+          </p>
+        </div>
+      </div>
+
+      <!-- User Profile Badge & Logout (Shown strictly when authenticated) -->
+      <div id="header-user-section" class="hidden flex flex-col items-end text-xs space-y-1.5">
+        <div class="bg-blue-950/90 border border-blue-400/40 rounded-lg px-3.5 py-1.5 text-right flex items-center gap-3 shadow-sm">
+          <div>
+            <div class="font-semibold text-white flex items-center justify-end gap-1.5">
+              <i class="fa-solid fa-user-shield text-amber-400"></i>
+              <span id="badge-user-name">Rajesh Kumar Sharma</span>
+              <span class="text-slate-400">|</span>
+              <span id="badge-user-role" class="text-amber-300 font-mono">Mining Sirdar</span>
+            </div>
+            <div class="text-[11px] text-blue-200 mt-0.5">
+              <span id="badge-mine-name">BCCL - Jharia Underground Colliery</span>
+            </div>
+          </div>
+          <div class="border-l border-blue-800 pl-3 flex items-center">
+            <button 
+              onclick="logoutToScreen1()" 
+              title="Sign Out to switch role or exit"
+              class="bg-rose-700/80 hover:bg-rose-700 text-rose-100 px-2.5 py-1 rounded text-[11px] font-semibold flex items-center gap-1.5 transition border border-rose-500/50 shadow-sm"
+            >
+              <i class="fa-solid fa-power-off text-[10px]"></i>
+              <span data-i18n="btn_signout">Sign Out</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center gap-3 text-[11px]">
+          <button onclick="openMineSnapshotModal()" class="text-emerald-400 hover:text-emerald-300 underline flex items-center gap-1">
+            <i class="fa-solid fa-shield-halved text-[10px]"></i> Colliery Safety Snapshot
+          </button>
+        </div>
+      </div>
+
+      <!-- Guest Indicator (Shown strictly on Screen 1 Login) -->
+      <div id="header-guest-badge" class="flex flex-col items-end text-xs">
+        <div class="bg-blue-950/90 border border-blue-400/30 rounded-lg px-3 py-1.5 text-right flex items-center gap-2 font-mono text-[11px] text-amber-300">
+          <i class="fa-solid fa-lock text-amber-400"></i>
+          <span data-i18n="badge_sso">DGMS National Single Sign-On (SSO)</span>
+        </div>
+        <span class="text-[10px] text-slate-300 mt-0.5" data-i18n="badge_auth_required">Authentication Required for Statutory Clearance</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- DYNAMIC ROLE-BASED NAVIGATION BAR -->
+  <!-- Hidden on Login Screen; renders only tabs authorized for the role -->
+  <!-- ========================================================= -->
+  <nav id="portal-nav-bar" class="hidden bg-slate-800 text-slate-300 border-b border-slate-700 py-1.5 px-4 text-xs sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto gap-3">
+      <!-- Dynamic Tabs injected strictly per role -->
+      <div class="flex items-center space-x-1.5 flex-shrink-0" id="role-nav-tabs">
+        <!-- Injected via renderRoleNavigation() -->
+      </div>
+
+      <!-- Active Role Scope Badge and Quick Sign Out -->
+      <div class="flex items-center gap-2.5 flex-shrink-0">
+        <span id="nav-role-badge" class="text-[10px] bg-blue-900 text-blue-200 px-2.5 py-0.5 rounded border border-blue-700 font-mono">
+          Scope: Field Safety Inspector (Form IV)
+        </span>
+        <button 
+          onclick="logoutToScreen1()" 
+          class="text-[11px] text-rose-300 hover:text-rose-100 bg-slate-900/60 hover:bg-rose-950 px-2 py-0.5 rounded border border-rose-800/60 transition flex items-center gap-1 font-semibold"
+        >
+          <i class="fa-solid fa-right-from-bracket text-[10px]"></i> Sign Out
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================= -->
+  <!-- MAIN VIEWPORT CONTAINER (SCREENS 1 - 11) -->
+  <!-- ========================================================= -->
+  <main class="flex-grow max-w-7xl w-full mx-auto p-4 md:p-6">
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 1: REFINED STATUTORY LOGIN GATE -->
+    <!-- ========================================================= -->
+    <section id="screen-1" class="max-w-md mx-auto transition-all my-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-xl overflow-hidden">
+        <div class="bg-slate-900 text-white p-4 border-b-2 border-amber-500 flex items-center justify-between">
+          <div>
+            <h2 class="text-base font-bold flex items-center gap-2">
+              <i class="fa-solid fa-lock text-amber-400"></i>
+              <span data-i18n="login_title">Statutory Officer Login</span>
+            </h2>
+            <p class="text-xs text-slate-300" data-i18n="login_subtitle">National Single Sign-On • Ministry of Coal</p>
+          </div>
+          <span class="text-[11px] bg-slate-800 text-amber-300 px-2 py-1 rounded border border-slate-700 font-mono">CMR-2017</span>
+        </div>
+
+        <form id="form-screen-1" onsubmit="handleLoginSubmit(event)" class="p-6 space-y-4">
+          <div class="bg-blue-50 border-l-4 border-blue-800 p-3 text-xs text-blue-950 rounded-r flex items-start gap-2">
+            <i class="fa-solid fa-shield-halved text-blue-800 mt-0.5"></i>
+            <div>
+              <span class="font-bold">Role-Authorized Portal:</span> Sign in with your registered Coal India / DGMS credentials to unlock the role-specific dashboard. To shift roles, simply sign out and log in under the other role.
+            </div>
+          </div>
+
+          <!-- Error Feedback Alert -->
+          <div id="login-error-alert" class="hidden bg-rose-50 border border-rose-300 text-rose-800 p-2.5 rounded text-xs flex items-center gap-2 font-medium">
+            <i class="fa-solid fa-circle-exclamation text-rose-600"></i>
+            <span id="login-error-text">Invalid credentials or captcha code.</span>
+          </div>
+
+          <!-- MINE LOCATION & OPERATIONAL ROLE (PRE-FILLED READY-TO-LOGIN) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-semibold text-slate-800 mb-1" data-i18n="label_colliery">
+                Colliery / Workings Unit
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center text-slate-400 text-xs">
+                  <i class="fa-solid fa-mountain"></i>
+                </span>
+                <select id="login-mine" onchange="handleMineOrRoleChange('mine')" class="w-full text-xs pl-8 pr-2 py-2 border border-slate-300 rounded bg-white font-medium focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                  <option value="BCCL - Jharia Colliery">BCCL — Jharia Colliery (Underground, Seam V)</option>
+                  <option value="SECL - Korba Deep Pit-3">SECL — Korba Deep Pit-3 (Gassy Seam III)</option>
+                  <option value="NCL - Singrauli OCP Block-B">NCL — Singrauli OCP Block-B (Opencast)</option>
+                  <option value="ECL - Raniganj Colliery">ECL — Raniganj Colliery (West Section)</option>
+                  <option value="CCL - Piparwar Opencast">CCL — Piparwar Heavy OCP (Washery)</option>
+                  <option value="DGMS HQ - All Subsidiaries">DGMS Head Office — All Subsidiaries</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-800 mb-1" data-i18n="label_role">
+                Designation / Operational Role
+              </label>
+              <div class="relative">
+                <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center text-slate-400 text-xs">
+                  <i class="fa-solid fa-id-badge"></i>
+                </span>
+                <select id="login-role" onchange="handleMineOrRoleChange('role')" class="w-full text-xs pl-8 pr-2 py-2 border border-slate-300 rounded bg-white font-medium focus:ring-2 focus:ring-blue-900 focus:border-blue-900">
+                  <option value="manager">Mine Manager / Colliery Agent</option>
+                  <option value="supervisor">Shift Supervisor (Colliery Overman)</option>
+                  <option value="corporate">DGMS Officer / Directorate Regulator</option>
+                  <option value="worker">Field Safety Inspector (Mining Sirdar, Form IV)</option>
+                  <option value="fixer.gas">Action Fixer 1: Ventilation & Gas Specialist</option>
+                  <option value="fixer.strata">Action Fixer 2: Strata & Roof Specialist</option>
+                  <option value="fixer.dust">Action Fixer 3: Mechanical, Dust & Fire Specialist</option>
+                  <option value="fixer.elec">Action Fixer 4: Electrical & Haulage Specialist</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- DYNAMIC ACTIVE IDENTITY PILL -->
+          <div id="login-identity-badge" class="bg-amber-50/80 border border-amber-300 text-amber-950 px-3 py-2 rounded text-xs flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-user-check text-amber-700"></i>
+              <span>Active Identity: <strong id="login-identity-name">V. K. Mehta</strong> • <span id="login-identity-title" class="text-slate-700">Colliery Agent & Mine Manager</span></span>
+            </div>
+            <span class="bg-emerald-100 text-emerald-800 border border-emerald-300 font-mono text-[10px] px-2 py-0.5 rounded font-bold">
+              ✓ Ready to Sign In
+            </span>
+          </div>
+
+          <!-- Username / Employee ID -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-800 mb-1">
+              <span data-i18n="label_username">Username or Employee ID</span> <span class="text-rose-600">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 text-xs">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <input 
+                type="text" 
+                id="login-username" 
+                autocomplete="username"
+                required 
+                class="w-full text-sm pl-9 pr-3 py-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-blue-900 bg-white font-medium"
+                placeholder="e.g. jharia.manager"
+              />
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div>
+            <div class="flex justify-between items-center mb-1">
+              <label class="block text-xs font-semibold text-slate-800">
+                <span data-i18n="label_password">Password</span> <span class="text-rose-600">*</span>
+              </label>
+              <a href="javascript:void(0)" onclick="alert('Password reset link has been dispatched to your registered Coal Net email.')" class="text-[11px] text-blue-800 hover:underline">Forgot password?</a>
+            </div>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3 flex items-center text-slate-400 text-xs">
+                <i class="fa-solid fa-key"></i>
+              </span>
+              <input 
+                type="password" 
+                id="login-password" 
+                autocomplete="current-password"
+                required 
+                class="w-full text-sm pl-9 pr-10 py-2 border border-slate-300 rounded focus:ring-2 focus:ring-blue-900 focus:border-blue-900 bg-white font-mono"
+                placeholder="••••••••••••"
+              />
+              <button 
+                type="button" 
+                onclick="togglePasswordVisibility()" 
+                class="absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 text-xs"
+                title="Toggle password visibility"
+              >
+                <i id="toggle-pwd-icon" class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Security Captcha Verification -->
+          <div>
+            <label class="block text-xs font-semibold text-slate-800 mb-1">
+              <span data-i18n="label_captcha">Security Captcha Verification</span> <span class="text-rose-600">*</span>
+            </label>
+            <div class="flex items-center gap-2">
+              <div class="captcha-box border border-slate-300 rounded px-3 py-1.5 font-mono text-sm tracking-widest font-bold text-slate-800 flex items-center gap-2 bg-slate-100 shadow-inner">
+                <span id="captcha-code-display" class="min-w-[80px] inline-block font-mono font-extrabold tracking-widest text-slate-900 text-sm text-center select-none"></span>
+                <button type="button" onclick="generateCaptcha()" title="Refresh Captcha" class="text-slate-500 hover:text-slate-800 transition">
+                  <i class="fa-solid fa-arrows-rotate text-xs"></i>
+                </button>
+              </div>
+              <input 
+                type="text" 
+                id="login-captcha" 
+                autocomplete="off"
+                required 
+                class="flex-1 text-sm py-2 px-3 border border-slate-300 rounded uppercase font-mono tracking-wider focus:ring-2 focus:ring-blue-900 font-bold bg-white"
+                placeholder="Enter Code"
+                maxlength="5"
+              />
+            </div>
+          </div>
+
+          <!-- Remember me & Geofence -->
+          <div class="flex items-center justify-between text-xs pt-1">
+            <label class="flex items-center gap-1.5 text-slate-700 cursor-pointer">
+              <input type="checkbox" checked class="rounded text-blue-900 focus:ring-blue-900" />
+              <span data-i18n="label_remember">Remember terminal</span>
+            </label>
+            <span class="text-emerald-700 font-mono text-[11px] flex items-center gap-1">
+              <i class="fa-solid fa-satellite-dish"></i> GPS Geofence Locked
+            </span>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-2">
+            <button type="submit" id="login-submit-btn" class="w-full bg-[#0b2545] hover:bg-[#133b68] disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-semibold py-2.5 px-4 rounded text-sm transition shadow flex items-center justify-center gap-2">
+              <i class="fa-solid fa-right-to-bracket text-xs"></i>
+              <span data-i18n="btn_login">Authenticate & Enter Statutory Portal</span>
+            </button>
+          </div>
+        </form>
+
+        <div class="bg-slate-100 px-6 py-2.5 border-t border-slate-200 text-center text-[11px] text-slate-500">
+          DGMS Statutory Compliance Network • Form IV / Form VII Secure Gateway
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 2: "START INSPECTION" HOME SCREEN (INSPECTOR) -->
+    <!-- ========================================================= -->
+    <section id="screen-2" class="hidden space-y-5 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <h2 class="text-lg font-bold text-slate-900" data-i18n="home_title">Shift Safety & Compliance Desk</h2>
+          </div>
+          <p class="text-xs text-slate-600 mt-0.5">
+            Logged In As: <strong id="home-disp-user" class="text-slate-900">Rajesh Kumar Sharma</strong> | Unit: <strong id="home-disp-mine" class="text-blue-900">BCCL - Jharia Underground Colliery</strong>
+          </p>
+        </div>
+        <div>
+          <span class="text-xs bg-blue-100 text-blue-900 px-3 py-1 rounded border border-blue-300 font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-file-signature"></i> Form IV Statutory Shift Log
+          </span>
+        </div>
+      </div>
+
+      <!-- Hero Button Card -->
+      <div class="bg-gradient-to-r from-[#0b2545] to-[#1e3a8a] rounded-lg shadow-md p-6 text-white flex flex-col md:flex-row justify-between items-center gap-6 border-b-4 border-amber-500">
+        <div class="space-y-2">
+          <span class="text-[11px] uppercase tracking-wider bg-amber-500 text-slate-950 font-bold px-2.5 py-0.5 rounded inline-block">
+            CMR 2017 MANDATORY AUDIT
+          </span>
+          <h3 class="text-2xl font-bold" data-i18n="home_inspection_title">Standard 10-Point Underground Safety Inspection</h3>
+          <p class="text-xs text-blue-100 max-w-xl leading-relaxed">
+            Execute statutory physical checks for Gas Monitoring, Ventilation, Strata Roof Support, Dust Barriers, Fire Extinguishers, and FLP Electrical Enclosures.
+          </p>
+          <div class="flex flex-wrap items-center gap-3 pt-1 text-xs text-amber-300">
+            <span class="flex items-center gap-1"><i class="fa-solid fa-camera"></i> Mandatory Photo Proof on Failure</span>
+            <span>•</span>
+            <span class="flex items-center gap-1"><i class="fa-solid fa-map-pin"></i> Auto Geolocation Tagging</span>
+            <span>•</span>
+            <span class="flex items-center gap-1"><i class="fa-solid fa-clock"></i> Immutable Timestamping</span>
+          </div>
+        </div>
+        <div class="flex-shrink-0 w-full md:w-auto">
+          <button onclick="startNewInspection()" class="w-full md:w-auto bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-base px-6 py-3.5 rounded shadow-lg transition flex items-center justify-center gap-3 border-2 border-amber-300">
+            <i class="fa-solid fa-clipboard-check text-lg"></i>
+            <span data-i18n="btn_start_inspection">Start New Inspection</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Ribbon -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm flex items-center justify-between border-l-4 border-l-emerald-600" id="home-stat-compliance-card">
+          <div>
+            <p class="text-xs text-slate-500 font-semibold uppercase">Compliance % This Month</p>
+            <p class="text-xl font-bold text-emerald-700" id="home-stat-compliance">92.4%</p>
+            <p class="text-[11px] text-emerald-600" id="home-stat-compliance-note"><i class="fa-solid fa-circle-check"></i> Within Acceptable Safety Limits</p>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700" id="home-stat-compliance-icon">
+            <i class="fa-solid fa-shield-check text-lg"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-500 font-medium">Pending Fixes in Shift</p>
+            <p class="text-xl font-bold text-amber-600" id="home-stat-pending">3 Items</p>
+            <p class="text-[11px] text-slate-500">Under Action Verification</p>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+            <i class="fa-solid fa-wrench text-lg"></i>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm flex items-center justify-between">
+          <div>
+            <p class="text-xs text-slate-500 font-medium">Total Monthly Audits</p>
+            <p class="text-xl font-bold text-blue-900">28 Logged</p>
+            <p class="text-[11px] text-blue-700"><i class="fa-solid fa-check"></i> 100% Shift Coverage</p>
+          </div>
+          <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-900">
+            <i class="fa-solid fa-list-check text-lg"></i>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- ENLARGED FIELD INSPECTOR STATUTORY INSPECTIONS LIST & LOG DESK -->
+      <div class="bg-white rounded-xl border border-slate-300 shadow-md overflow-hidden">
+        <div class="bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 px-5 py-4 border-b border-slate-800 text-white flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="bg-amber-500 text-slate-950 text-[10px] font-mono px-2 py-0.5 rounded font-extrabold uppercase">
+                FORM IV STATUTORY MASTER REGISTER
+              </span>
+              <span class="text-xs text-blue-200 font-mono">CMR 2017 Shift Audits</span>
+            </div>
+            <h3 class="text-base font-bold text-white mt-1 flex items-center gap-2">
+              <i class="fa-solid fa-clipboard-list text-amber-400"></i>
+              Colliery Shift Inspections Register & Field Telemetry Desk
+            </h3>
+            <p class="text-xs text-slate-300">Official statutory logs: multi-gas telemetry, strata roof bolting, ventilation velocity, FLP electrical status & immediate remedial assignments.</p>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="bg-slate-800 border border-slate-700 text-slate-200 px-3 py-1.5 rounded-lg font-mono font-bold text-emerald-400" id="insp-total-count-badge">
+              Active Logs
+            </span>
+          </div>
+        </div>
+
+        <!-- Filter & Search Sub-bar for Inspections -->
+        <div class="bg-slate-50 border-b border-slate-200 px-5 py-3 flex flex-wrap justify-between items-center gap-3">
+          <div class="flex flex-wrap items-center gap-3 text-xs text-slate-700">
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold"><i class="fa-solid fa-filter text-blue-900 mr-1"></i> Shift:</span>
+              <select id="filter-insp-shift" onchange="renderScreen2PastInspections()" class="text-xs py-1.5 px-2.5 border border-slate-300 rounded bg-white font-medium focus:ring-1 focus:ring-blue-800">
+                <option value="ALL">All Shifts</option>
+                <option value="Shift 1">Shift 1 (Morning)</option>
+                <option value="Shift 2">Shift 2 (Afternoon)</option>
+                <option value="Shift 3">Shift 3 (Night)</option>
+                <option value="General Shift">General Shift</option>
+              </select>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span class="font-bold text-slate-600">Compliance Tier:</span>
+              <select id="filter-insp-status" onchange="renderScreen2PastInspections()" class="text-xs py-1.5 px-2.5 border border-slate-300 rounded bg-white font-medium focus:ring-1 focus:ring-blue-800">
+                <option value="ALL">All Audit Outcomes</option>
+                <option value="COMPLIANT">100% Compliant (Clean Audit)</option>
+                <option value="VIOLATIONS">Non-Compliant (Violations Identified)</option>
+              </select>
+            </div>
+          </div>
+          <div class="relative min-w-[280px]">
+            <input 
+              type="text" 
+              id="search-insp-query" 
+              oninput="renderScreen2PastInspections()" 
+              placeholder="Search Inspection ID, Location, or Auditor..." 
+              class="w-full text-xs py-1.5 pl-8 pr-3 border border-slate-300 rounded bg-white text-slate-800 focus:ring-1 focus:ring-blue-800"
+            />
+            <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2.5 text-slate-400 text-xs"></i>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 text-slate-700 border-b border-slate-300 font-bold uppercase text-[11px] tracking-wider">
+              <tr>
+                <th class="py-3 px-4">Inspection Reference</th>
+                <th class="py-3 px-4">Date & Shift</th>
+                <th class="py-3 px-4">Colliery & Working Face</th>
+                <th class="py-3 px-4">Auditor Attestation</th>
+                <th class="py-3 px-4 text-center">Statutory Compliance</th>
+                <th class="py-3 px-4 text-center">Audit Tally</th>
+                <th class="py-3 px-4 text-center">Status</th>
+                <th class="py-3 px-4 text-right">Form IV Actions</th>
+              </tr>
+            </thead>
+            <tbody id="past-inspections-tbody" class="divide-y divide-slate-200 text-slate-800">
+              <!-- Rendered dynamically via renderScreen2PastInspections() -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 3: THE 10-ITEM COMPLIANCE CHECKLIST (INSPECTOR) -->
+    <!-- ========================================================= -->
+    <section id="screen-3" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="bg-blue-900 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 3 of 11</span>
+            <h2 class="text-base font-bold text-slate-900" data-i18n="checklist_title">Coal Mine Statutory 10-Item Inspection Checklist</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">
+            Evaluate all 10 statutory items. Marking <span class="text-rose-700 font-bold">Fail (❌)</span> enforces photographic evidence, GPS coordinate capture, and severity classification.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Compliance % This Month Pill for Field Inspector Screen 3 -->
+          <div class="flex items-center gap-2 bg-emerald-50/70 border border-emerald-300 px-3 py-1.5 rounded" id="screen3-compliance-card">
+            <div class="text-right">
+              <span class="text-[10px] text-slate-500 block uppercase font-semibold">Compliance % This Month</span>
+              <span class="text-base font-bold text-emerald-700 font-mono" id="screen3-compliance-pct">92.4%</span>
+            </div>
+            <span class="text-[10px] bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-mono font-bold" id="screen3-compliance-badge">DGMS Green</span>
+          </div>
+
+          <div class="flex items-center gap-3 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded">
+            <div class="text-right">
+              <div class="text-xs font-bold text-slate-800" id="checklist-progress-text">0 of 10 Evaluated</div>
+              <div class="text-[10px] text-slate-500" id="checklist-tally-text">0 Pass | 0 Fail</div>
+            </div>
+            <div class="w-16 bg-slate-200 h-2.5 rounded-full overflow-hidden">
+              <div id="checklist-progress-bar" class="bg-blue-900 h-full w-0 transition-all duration-300"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-200 rounded p-2.5 flex flex-wrap justify-between items-center text-xs text-amber-900">
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-wand-magic-sparkles text-amber-600"></i>
+          <strong>Quick Hackathon Simulation:</strong> Auto-simulate a realistic coal mine inspection (8 Passed, 2 Non-Compliant):
+        </span>
+        <button onclick="simulateDemoChecklist()" class="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold px-3 py-1 rounded text-xs transition shadow-sm">
+          Auto-Fill Realistic Scenario (8 Pass, 2 Fail)
+        </button>
+      </div>
+
+      <div id="checklist-items-container" class="space-y-4">
+        <!-- Rendered via JS -->
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 p-4 shadow-sm flex justify-between items-center">
+        <button onclick="switchScreen(2)" class="px-4 py-2 border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded flex items-center gap-1.5">
+          <i class="fa-solid fa-arrow-left"></i> Back to Desk
+        </button>
+        <button id="btn-go-to-review" onclick="goToScreen4Review()" class="px-5 py-2.5 bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold rounded shadow flex items-center gap-2">
+          <span data-i18n="btn_review_submit">Proceed to Review & Submit</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 4: REVIEW & SUBMIT (INSPECTOR) -->
+    <!-- ========================================================= -->
+    <section id="screen-4" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <div>
+            <span class="bg-blue-900 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 4 of 11</span>
+            <h2 class="text-base font-bold text-slate-900 mt-1" data-i18n="review_title">Inspection Statutory Summary & Submission Review</h2>
+            <p class="text-xs text-slate-500">Verify physical observations before signing and generating official DGMS violation records.</p>
+          </div>
+          <div id="review-score-badge" class="bg-emerald-100 border border-emerald-400 text-emerald-800 px-3 py-1.5 rounded text-right font-mono">
+            <span class="text-sm font-bold block" id="review-compliance-pct">80% Compliance</span>
+            <span class="text-[11px]" id="review-counts-text">8 Passed • 2 Failed</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="bg-slate-100 px-4 py-2.5 border-b border-slate-200 text-xs font-bold text-slate-700 uppercase">
+          Detailed Item-by-Item Statutory Audit
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-xs text-left">
+            <thead class="bg-slate-50 text-slate-700 border-b border-slate-200">
+              <tr>
+                <th class="py-2.5 px-3 w-12">#</th>
+                <th class="py-2.5 px-3" data-i18n="review_th_parameter">Statutory Regulation & Checklist Parameter</th>
+                <th class="py-2.5 px-3 w-28" data-i18n="review_th_result">Audit Result</th>
+                <th class="py-2.5 px-3 w-28" data-i18n="review_th_severity">Severity</th>
+                <th class="py-2.5 px-3" data-i18n="review_th_evidence">Evidence Photo & GPS</th>
+              </tr>
+            </thead>
+            <tbody id="review-table-body" class="divide-y divide-slate-200">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 border border-amber-300 rounded-lg p-4 text-xs space-y-2">
+        <div class="flex items-start gap-2">
+          <input type="checkbox" id="statutory-attestation" checked class="mt-0.5 rounded text-blue-900 focus:ring-blue-900" />
+          <label for="statutory-attestation" class="text-slate-800 leading-relaxed">
+            <strong>Statutory Declaration under CMR 2017:</strong> I, <span id="review-inspector-name-decl" class="font-semibold text-blue-900">Rajesh Kumar Sharma</span>, hereby declare that I have personally inspected the designated underground workings at <span id="review-mine-name-decl" class="font-semibold">BCCL Jharia Colliery</span>. All observations and photographic evidence are authentic.
+          </label>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 p-4 shadow-sm flex justify-between items-center">
+        <button onclick="switchScreen(3)" class="px-4 py-2 border border-slate-300 hover:bg-slate-100 text-slate-700 text-xs font-semibold rounded flex items-center gap-1.5">
+          <i class="fa-solid fa-pen-to-square"></i> Modify Checklist
+        </button>
+        <button onclick="submitInspection()" class="px-6 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold rounded shadow flex items-center gap-2 transition">
+          <i class="fa-solid fa-stamp"></i>
+          <span data-i18n="btn_submit_inspection">Submit Inspection & Issue Action Orders</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 5: ASSIGN CORRECTIVE ACTION ORDERS (INSPECTOR) -->
+    <!-- ========================================================= -->
+    <section id="screen-5" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="bg-amber-500 text-slate-950 text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 5 of 11</span>
+              <h2 class="text-base font-bold text-slate-900">Statutory Corrective Action Order Assignment (Form VII)</h2>
+            </div>
+            <p class="text-xs text-slate-600 mt-1">
+              Inspection ID: <strong id="assign-insp-id" class="font-mono text-blue-900">INSP-BCCL-2026-0902-8419</strong>. Assign designated engineers and specify remediation deadlines.
+            </p>
+          </div>
+          <div class="text-xs bg-rose-50 border border-rose-300 text-rose-800 px-3 py-1.5 rounded font-medium flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-rose-600"></i>
+            <span id="assign-failed-count-banner">2 Non-Compliant Violations</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="assign-cards-container" class="space-y-4">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 p-4 shadow-sm flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div class="text-xs text-slate-500">
+          <i class="fa-solid fa-shield-halved text-blue-900 mr-1"></i>
+          Assigned orders will immediately notify the nominated officers and appear in their Part B field queue (Screen 6).
+        </div>
+        <button onclick="dispatchCorrectiveActions()" class="w-full sm:w-auto px-6 py-2.5 bg-[#0b2545] hover:bg-[#133b68] text-white text-xs font-bold rounded shadow flex items-center justify-center gap-2">
+          <i class="fa-solid fa-paper-plane text-amber-400"></i>
+          <span>Dispatch Action Orders & Complete Filing</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 6: "MY ASSIGNED ACTIONS" LIST (ACTION FIXER) -->
+    <!-- ========================================================= -->
+    <section id="screen-6" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="bg-amber-600 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 6 of 11 • Action Fixer</span>
+            <h2 class="text-base font-bold text-slate-900">My Assigned Remedial Actions (Field Queue)</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">
+            Violations assigned to you, ordered by statutory deadline urgency and risk severity. Click any item to upload proof and close it out.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-xs bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1 rounded font-bold" id="assigned-actions-count-badge">
+            3 Active Orders
+          </span>
+        </div>
+      </div>
+
+      <!-- AUTOMATIC 24-HOUR STATUTORY DEADLINE WARNING BANNER FOR FIXERS -->
+      <div id="fixer-deadline-alert-banner" class="hidden">
+        <!-- Rendered dynamically if open tasks have <= 24h remaining -->
+      </div>
+
+      <!-- URGENT STATUTORY ESCALATION ALERTS FROM MINE MANAGER / DGMS -->
+      <div id="fixer-urgent-alerts-banner" class="hidden">
+        <!-- Rendered dynamically via JS if alerts exist -->
+      </div>
+
+      <!-- Action Items Cards Container -->
+      <div id="my-actions-list-container" class="space-y-3">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 7: CLOSE OUT A VIOLATION (ACTION FIXER) -->
+    <!-- ========================================================= -->
+    <section id="screen-7" class="hidden space-y-4 max-w-4xl mx-auto screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex justify-between items-center">
+        <div>
+          <span class="bg-amber-600 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 7 of 11 • Action Fixer</span>
+          <h2 class="text-base font-bold text-slate-900 mt-1" data-i18n="closeout_title">Close Out Violation & Upload Proof of Remediation</h2>
+          <p class="text-xs text-slate-500">Provide verified "After" photographic evidence and rectification remarks for supervisor verification.</p>
+        </div>
+        <button onclick="switchScreen(6)" class="text-xs text-blue-900 hover:underline font-semibold flex items-center gap-1">
+          <i class="fa-solid fa-arrow-left"></i> Back to My Actions
+        </button>
+      </div>
+
+      <!-- Details Card -->
+      <div id="closeout-details-card" class="bg-white rounded-lg border border-slate-300 shadow-sm p-5 space-y-5">
+        <!-- Rendered dynamically for selected violation -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 8: VERIFY (SUPERVISOR ROLE) -->
+    <!-- ========================================================= -->
+    <section id="screen-8" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="bg-emerald-700 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 8 of 11 • Supervisor Desk</span>
+            <h2 class="text-base font-bold text-slate-900">Supervisor Statutory Verification (Form VII-A)</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">
+            Inspect side-by-side Before & After photographic evidence submitted by fixers. Approve to close violation or Reject with directives.
+          </p>
+        </div>
+        <span class="text-xs bg-blue-100 text-blue-900 px-3 py-1 rounded border border-blue-300 font-bold" id="pending-verifications-count-badge">
+          2 Pending Verification
+        </span>
+      </div>
+
+      <!-- Verification Queue Container -->
+      <div id="verifications-container" class="space-y-4">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 9: OVERVIEW DASHBOARD (MINE MANAGER & CORPORATE) -->
+    <!-- ========================================================= -->
+    <section id="screen-9" class="hidden space-y-5 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="bg-blue-950 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 9 of 11 • Executive Dashboard</span>
+            <h2 class="text-lg font-bold text-slate-900">DGMS Mine Safety & Compliance Executive Dashboard</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">
+            High-level executive metrics, statutory compliance score, and historical violation frequency across colliery workings.
+          </p>
+        </div>
+        <div class="flex items-center gap-2" id="dash-mine-selector-wrapper">
+          <select id="dash-filter-mine" onchange="refreshDashboardData()" class="text-xs py-1.5 px-3 border border-slate-300 rounded bg-white font-semibold text-slate-800">
+            <option value="ALL">All Mines (Consolidated)</option>
+            <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+            <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+            <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+            <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+            <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+          </select>
+          <span id="dash-manager-locked-badge" class="hidden text-xs bg-blue-900 text-blue-100 px-3 py-1.5 rounded font-mono font-bold flex items-center gap-1.5 border border-blue-700">
+            <i class="fa-solid fa-lock text-amber-400"></i>
+            <span id="dash-manager-mine-label">Locked to: BCCL - Jharia Colliery</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- DGMS STATUTORY WORK-STOPPAGE WARNING DIRECTIVE (SECTION 22 MINES ACT) -->
+      <div id="manager-stoppage-warning-banner" class="hidden">
+        <!-- Rendered dynamically via JS if active DGMS stoppage order exists -->
+      </div>
+
+      <!-- 21-DAY STATUTORY MINE SUSPENSION BANNER (TRIGGERS IF >3 RED ALERTS IN 28 DAYS) -->
+      <div id="manager-red-alert-suspension-banner" class="hidden">
+        <!-- Rendered dynamically via JS if suspension triggered -->
+      </div>
+
+      <!-- 28-DAY RED ALERT STATUTORY TRACKER CARD FOR MINE MANAGER / SUPERVISOR -->
+      <div id="manager-red-alert-status-card" class="hidden">
+        <!-- Rendered dynamically via JS -->
+      </div>
+
+      <!-- TOP 4 BIG NUMBERS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Open Violations -->
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm border-l-4 border-l-blue-800">
+          <p class="text-xs text-slate-500 font-semibold uppercase">Open Violations</p>
+          <div class="flex items-baseline justify-between mt-1">
+            <span class="text-2xl md:text-3xl font-bold text-blue-950" id="dash-open-violations">7</span>
+            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-mono">Total Active</span>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-1">Under investigation or remediation</p>
+        </div>
+
+        <!-- Critical Violations -->
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm border-l-4 border-l-rose-600">
+          <p class="text-xs text-slate-500 font-semibold uppercase">Critical Violations</p>
+          <div class="flex items-baseline justify-between mt-1">
+            <span class="text-2xl md:text-3xl font-bold text-rose-600" id="dash-critical-violations">2</span>
+            <span class="text-xs bg-rose-100 text-rose-800 px-2 py-0.5 rounded font-mono">24h Immediate</span>
+          </div>
+          <p class="text-[11px] text-rose-600 mt-1 font-medium"><i class="fa-solid fa-triangle-exclamation"></i> Immediate Hazard Danger</p>
+        </div>
+
+        <!-- Overdue Corrective Actions -->
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm border-l-4 border-l-amber-500">
+          <p class="text-xs text-slate-500 font-semibold uppercase">Overdue Actions</p>
+          <div class="flex items-baseline justify-between mt-1">
+            <span class="text-2xl md:text-3xl font-bold text-amber-600" id="dash-overdue-actions">1</span>
+            <span class="text-xs bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-mono">Exceeded TAT</span>
+          </div>
+          <p class="text-[11px] text-slate-500 mt-1">Passed statutory remediation deadline</p>
+        </div>
+
+        <!-- Compliance % This Month -->
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm border-l-4 border-l-emerald-600">
+          <p class="text-xs text-slate-500 font-semibold uppercase">Compliance % This Month</p>
+          <div class="flex items-baseline justify-between mt-1">
+            <span class="text-2xl md:text-3xl font-bold text-emerald-700" id="dash-compliance-pct">92.4%</span>
+            <span class="text-xs bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-mono">DGMS Green</span>
+          </div>
+          <p class="text-[11px] text-emerald-600 mt-1"><i class="fa-solid fa-circle-check"></i> Within Acceptable Safety Limits</p>
+        </div>
+      </div>
+
+      <!-- CHARTS SECTION -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+        <!-- Line Chart: Violations Over Time -->
+        <div class="lg:col-span-2 bg-white p-4 rounded-lg border border-slate-300 shadow-sm space-y-2">
+          <div class="flex justify-between items-center border-b border-slate-200 pb-2">
+            <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-chart-line text-blue-900"></i>
+              Statutory Violations & Closures Over Time (Last 6 Months)
+            </h3>
+            <span class="text-[11px] text-slate-500">DGMS Trend Analysis</span>
+          </div>
+          <div class="h-64 relative">
+            <canvas id="violationsTrendChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Doughnut Chart: Severity Breakdown -->
+        <div class="bg-white p-4 rounded-lg border border-slate-300 shadow-sm space-y-2">
+          <div class="border-b border-slate-200 pb-2">
+            <h3 class="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-chart-pie text-blue-900"></i>
+              Severity Distribution
+            </h3>
+          </div>
+          <div class="h-64 relative flex items-center justify-center">
+            <canvas id="severityDoughnutChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 10: VIOLATIONS TABLE (MANAGER, SUPERVISOR, CORPORATE) -->
+    <!-- ========================================================= -->
+    <section id="screen-10" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <div>
+            <span class="bg-blue-950 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 10 of 11 • Violations Log</span>
+            <h2 class="text-base font-bold text-slate-900 mt-1">Master Statutory Violations Audit Log</h2>
+            <p class="text-xs text-slate-500">Drill down into specific coal mine violations with multi-parameter filtering.</p>
+          </div>
+          <div class="text-xs font-mono text-slate-600 bg-slate-100 border border-slate-300 px-3 py-1 rounded">
+            Total Logged: <strong id="table-total-count" class="text-blue-900 font-bold">7</strong>
+          </div>
+        </div>
+
+        <!-- FILTER BAR -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mt-4 pt-3 border-t border-slate-200">
+          <div id="table-mine-filter-container">
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Filter by Mine</label>
+            <select id="filter-table-mine" onchange="filterViolationsTable()" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white font-medium">
+              <option value="ALL">All Mines</option>
+              <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+              <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+              <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+              <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+              <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+            </select>
+            <div id="table-mine-locked-badge" class="hidden text-[11px] bg-blue-950 text-blue-100 py-1.5 px-2 rounded border border-blue-800 font-mono font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-lock text-amber-400 text-[10px]"></i>
+              <span id="table-mine-locked-label">Locked to Mine</span>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Filter by Severity</label>
+            <select id="filter-table-severity" onchange="filterViolationsTable()" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+              <option value="ALL">All Severities</option>
+              <option value="Critical">Critical (Immediate Danger)</option>
+              <option value="Major">Major</option>
+              <option value="Minor">Minor</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Filter by Status</label>
+            <select id="filter-table-status" onchange="filterViolationsTable()" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+              <option value="ALL">All Statuses</option>
+              <option value="OPEN">OPEN</option>
+              <option value="PENDING_VERIFICATION">PENDING VERIFICATION</option>
+              <option value="CLOSED">CLOSED</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Search Keyword / ID</label>
+            <div class="relative">
+              <input type="text" id="filter-table-search" oninput="filterViolationsTable()" placeholder="Search..." class="w-full text-xs py-1.5 pl-7 pr-2 border border-slate-300 rounded bg-white" />
+              <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2 text-slate-400 text-[10px]"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TABLE CONTAINER -->
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 text-slate-700 border-b border-slate-300 font-bold">
+              <tr>
+                <th class="py-2.5 px-3">Violation ID</th>
+                <th class="py-2.5 px-3">Mine Unit</th>
+                <th class="py-2.5 px-3">Regulation & Issue</th>
+                <th class="py-2.5 px-3">Severity</th>
+                <th class="py-2.5 px-3">Remediation Deadline</th>
+                <th class="py-2.5 px-3">Assigned To</th>
+                <th class="py-2.5 px-3">Current Status</th>
+                <th class="py-2.5 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="master-violations-tbody" class="divide-y divide-slate-200">
+              <!-- Rendered dynamically via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 11: MINE DRILL-DOWN (CORPORATE DIRECTOR ROLE) -->
+    <!-- ========================================================= -->
+    <section id="screen-11" class="hidden space-y-5 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="bg-purple-900 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 11 of 11 • Corporate View</span>
+            <h2 class="text-base font-bold text-slate-900">Subsidiary Multi-Mine Health & AI Risk Scoring Index</h2>
+          </div>
+          <p class="text-xs text-slate-500 mt-0.5">
+            AI-driven predictive risk assessment ranking coal mines across subsidiaries to spotlight safety intervention priorities.
+          </p>
+        </div>
+        <span class="text-xs bg-purple-100 text-purple-900 px-3 py-1 rounded border border-purple-300 font-mono font-bold">
+          Coal India Limited (CIL) Subsidiaries
+        </span>
+      </div>
+
+      <!-- MINE HEALTH SUMMARY CARDS -->
+      <div id="corporate-mines-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- Rendered dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 12: CLOSED VIOLATIONS (LAST 7 DAYS) -->
+    <!-- (MINE MANAGER, SUPERVISOR, DGMS REGULATOR) -->
+    <!-- ========================================================= -->
+    <section id="screen-12" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="bg-emerald-900 text-emerald-100 text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 12 • Statutory Resolution Archive</span>
+              <span class="bg-blue-100 text-blue-900 text-[10px] font-mono px-2 py-0.5 rounded font-bold">CMR 2017 Form VII-A</span>
+            </div>
+            <h2 class="text-base font-bold text-slate-900 mt-1">Closed Compliance Violations — Past 7 Days</h2>
+            <p class="text-xs text-slate-500">Official statutory log of resolved violations verified on-site with before/after photographic proof within the preceding 7 days.</p>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-mono text-emerald-800 bg-emerald-50 border border-emerald-300 px-3 py-1 rounded font-bold flex items-center gap-1.5 shadow-xs">
+              <i class="fa-solid fa-certificate text-emerald-600"></i>
+              <span>100% Statutorily Cleared</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- 7-DAY SUMMARY KPI METRICS -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 pt-3 border-t border-slate-200">
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <span class="text-[10px] font-bold uppercase text-slate-500 block">Closed (7 Days)</span>
+            <span id="closed-kpi-total" class="text-xl font-mono font-bold text-emerald-700">0</span>
+            <span class="text-[10px] text-slate-500 block">Form VII-A signed off</span>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <span class="text-[10px] font-bold uppercase text-slate-500 block">Critical Remediated</span>
+            <span id="closed-kpi-critical" class="text-xl font-mono font-bold text-blue-900">0</span>
+            <span class="text-[10px] text-slate-500 block">High-danger resolved</span>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <span class="text-[10px] font-bold uppercase text-slate-500 block">Avg MTTR (Turnaround)</span>
+            <span id="closed-kpi-mttr" class="text-xl font-mono font-bold text-slate-800">18.4 hrs</span>
+            <span class="text-[10px] text-emerald-600 font-semibold block">Under 24h statutory cap</span>
+          </div>
+          <div class="bg-slate-50 p-2.5 rounded border border-slate-200">
+            <span class="text-[10px] font-bold uppercase text-slate-500 block">Supervisor Sign-Off</span>
+            <span id="closed-kpi-verified" class="text-xl font-mono font-bold text-emerald-600">100%</span>
+            <span class="text-[10px] text-slate-500 block">Dual photo verified</span>
+          </div>
+        </div>
+
+        <!-- FILTERS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-3 pt-3 border-t border-slate-200">
+          <div id="closed-mine-filter-container">
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Colliery Filter</label>
+            <select id="filter-closed-mine" onchange="renderScreen12ClosedViolations()" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+              <option value="ALL">All Associated Mines</option>
+              <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+              <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+              <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+              <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+              <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Filter by Severity</label>
+            <select id="filter-closed-severity" onchange="renderScreen12ClosedViolations()" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+              <option value="ALL">All Severities</option>
+              <option value="Critical">Critical</option>
+              <option value="Major">Major</option>
+              <option value="Minor">Minor</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Search ID / Title / Fixer</label>
+            <div class="relative">
+              <input type="text" id="filter-closed-search" oninput="renderScreen12ClosedViolations()" placeholder="Search closed violations..." class="w-full text-xs py-1.5 pl-7 pr-2 border border-slate-300 rounded bg-white" />
+              <i class="fa-solid fa-magnifying-glass absolute left-2.5 top-2 text-slate-400 text-[10px]"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLOSED VIOLATIONS TABLE CONTAINER -->
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-100 text-slate-700 border-b border-slate-300 font-bold">
+              <tr>
+                <th class="py-2.5 px-3">Violation ID</th>
+                <th class="py-2.5 px-3">Mine Unit</th>
+                <th class="py-2.5 px-3">Hazard & Regulation</th>
+                <th class="py-2.5 px-3">Severity</th>
+                <th class="py-2.5 px-3">Remediated By</th>
+                <th class="py-2.5 px-3">Closed Date (7 Days)</th>
+                <th class="py-2.5 px-3">Supervisory Verification</th>
+                <th class="py-2.5 px-3 text-right">Statutory Actions</th>
+              </tr>
+            </thead>
+            <tbody id="closed-violations-tbody" class="divide-y divide-slate-200">
+              <!-- Rendered dynamically via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 13: ENVIRONMENTAL & PRODUCTION COMPLIANCE (PHASE 1) -->
+    <!-- ========================================================= -->
+    <section id="screen-13" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-emerald-900 text-emerald-100 text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 13 • Phase 1 — Statutory Compliance Registers</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Environmental &amp; Production Compliance</h2>
+        <p class="text-xs text-slate-500">Live from backend — Consent-to-Operate, emission/effluent limits, plantation tracking, and daily production returns vs. DGMS-approved capacity.</p>
+        <div class="mt-3">
+          <label class="block text-[11px] font-bold text-slate-700 mb-1">Colliery</label>
+          <select id="screen13-mine-filter" onchange="renderScreen13Compliance()" class="w-full sm:w-72 text-xs py-1.5 px-2 border border-slate-300 rounded bg-white font-medium">
+            <option value="ALL">Consolidated View — All 5 Mines</option>
+            <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+            <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+            <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+            <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+            <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="screen13-env-kpis" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Environmental Parameter Register</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Category</th>
+                <th class="py-2 px-3">Parameter</th>
+                <th class="py-2 px-3">Reading</th>
+                <th class="py-2 px-3">Statutory Limit</th>
+                <th class="py-2 px-3">Status</th>
+                <th class="py-2 px-3">Remarks</th>
+              </tr>
+            </thead>
+            <tbody id="screen13-env-tbody" class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="screen13-prod-kpis" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Production Return Log (Last 30 Days)</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Date</th>
+                <th class="py-2 px-3">Shift</th>
+                <th class="py-2 px-3">Extracted (T)</th>
+                <th class="py-2 px-3">Approved Capacity (T)</th>
+                <th class="py-2 px-3">Status</th>
+              </tr>
+            </thead>
+            <tbody id="screen13-prod-tbody" class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 14: LABOUR & CONTRACTOR GOVERNANCE (PHASE 1) -->
+    <!-- ========================================================= -->
+    <section id="screen-14" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-emerald-900 text-emerald-100 text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 14 • Phase 1 — Statutory Compliance Registers</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Labour &amp; Contractor Governance</h2>
+        <p class="text-xs text-slate-500">Live from backend — geo-tagged worker attendance and third-party contractor licensing, safety-training status, and flags.</p>
+        <div class="mt-3">
+          <label class="block text-[11px] font-bold text-slate-700 mb-1">Colliery</label>
+          <select id="screen14-mine-filter" onchange="renderScreen14Labour()" class="w-full sm:w-72 text-xs py-1.5 px-2 border border-slate-300 rounded bg-white font-medium">
+            <option value="ALL">Consolidated View — All 5 Mines</option>
+            <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+            <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+            <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+            <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+            <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="screen14-kpis" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700 flex justify-between items-center">
+          <span>Contractor Master List</span>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Contractor</th>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">License No.</th>
+                <th class="py-2 px-3">License Expiry</th>
+                <th class="py-2 px-3">Safety Training</th>
+                <th class="py-2 px-3">Status</th>
+                <th class="py-2 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="screen14-contractor-tbody" class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Recent Worker Attendance (Geo-Tagged)</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Worker</th>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Designation</th>
+                <th class="py-2 px-3">Check-In</th>
+                <th class="py-2 px-3">GPS</th>
+                <th class="py-2 px-3">Type</th>
+              </tr>
+            </thead>
+            <tbody id="screen14-attendance-tbody" class="divide-y divide-slate-200"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 15: RECURRING VIOLATIONS & AI ANOMALY ANALYTICS (PHASE 2) -->
+    <!-- ========================================================= -->
+    <section id="screen-15" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-blue-950 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 15 • Phase 2 — AI/Analytics Made Real</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Recurring Violations &amp; Anomaly Detection</h2>
+        <p class="text-xs text-slate-500">Computed live from the statutory violations ledger — surfaces repeating regulation breaches and mines whose open-violation load has spiked above their own historical baseline.</p>
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Recurring Compliance Failures</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Regulation</th>
+                <th class="py-2 px-3">Issue</th>
+                <th class="py-2 px-3">Occurrences</th>
+                <th class="py-2 px-3">Still Open</th>
+                <th class="py-2 px-3">Last Occurred</th>
+              </tr>
+            </thead>
+            <tbody id="screen15-recurring-tbody" class="divide-y divide-slate-200">
+              <tr><td colspan="6" class="py-4 px-3 text-center text-slate-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Anomalous Mines (Open-Violation Spike vs. Own Baseline)</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Open Violations</th>
+                <th class="py-2 px-3">Historical Baseline</th>
+                <th class="py-2 px-3">Deviation Ratio</th>
+                <th class="py-2 px-3">Flag</th>
+              </tr>
+            </thead>
+            <tbody id="screen15-anomalies-tbody" class="divide-y divide-slate-200">
+              <tr><td colspan="5" class="py-4 px-3 text-center text-slate-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 16: GRIEVANCE HANDLING (PHASE 3) -->
+    <!-- ========================================================= -->
+    <section id="screen-16" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-indigo-900 text-indigo-100 text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 16 • Phase 3 — Grievance Handling</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Worker Grievance Intake &amp; Resolution</h2>
+        <p class="text-xs text-slate-500">Submission → routing to a designated officer → tracked resolution, using the same escalation-ladder pattern as statutory violations. Submission stays available on web for completeness; the app is its primary home.</p>
+      </div>
+
+      <!-- Submission form (all roles can file) -->
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4" id="screen16-submit-card">
+        <h3 class="text-xs font-bold text-slate-700 mb-2 flex items-center gap-1.5"><i class="fa-solid fa-pen-to-square text-indigo-600"></i> File a New Grievance</h3>
+        <form id="grievance-submit-form" class="grid grid-cols-1 md:grid-cols-2 gap-3" onsubmit="handleGrievanceSubmit(event)">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Category</label>
+            <select id="grievance-category" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white" required>
+              <option value="Wages">Wages</option>
+              <option value="Safety">Safety</option>
+              <option value="Working Hours">Working Hours</option>
+              <option value="Welfare Facilities">Welfare Facilities</option>
+              <option value="Harassment">Harassment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Priority</label>
+            <select id="grievance-priority" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+              <option value="NORMAL">Normal</option>
+              <option value="HIGH">High</option>
+              <option value="URGENT">Urgent</option>
+            </select>
+          </div>
+          <div class="md:col-span-2">
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Description</label>
+            <textarea id="grievance-description" rows="3" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded" placeholder="Describe the issue..." required></textarea>
+          </div>
+          <div class="flex items-center gap-2">
+            <input type="checkbox" id="grievance-anonymous" class="rounded" />
+            <label for="grievance-anonymous" class="text-[11px] text-slate-600">Submit anonymously</label>
+          </div>
+          <div class="flex items-end justify-end">
+            <button type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white text-xs font-bold px-4 py-2 rounded shadow-sm flex items-center gap-1.5">
+              <i class="fa-solid fa-paper-plane"></i> Submit Grievance
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div id="screen16-kpis" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Grievance Register</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">ID</th>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Submitted By</th>
+                <th class="py-2 px-3">Category</th>
+                <th class="py-2 px-3">Priority</th>
+                <th class="py-2 px-3">Status</th>
+                <th class="py-2 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="screen16-tbody" class="divide-y divide-slate-200">
+              <tr><td colspan="7" class="py-4 px-3 text-center text-slate-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 17: GIS MAP VIEW (PHASE 3) -->
+    <!-- ========================================================= -->
+    <section id="screen-17" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-emerald-900 text-emerald-100 text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 17 • Phase 3 — GIS Map View</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Colliery &amp; Hazard-Site Geographic Map</h2>
+        <p class="text-xs text-slate-500">Paper-map view of mine locations and GPS-tagged violation zones. DGMS can use the consolidated view or select any individual mine; mine managers are locked to their own colliery.</p>
+        <div class="mt-3">
+          <label class="block text-[11px] font-bold text-slate-700 mb-1">Colliery</label>
+          <select id="screen17-mine-filter" onchange="renderScreen17GIS()" class="w-full sm:w-72 text-xs py-1.5 px-2 border border-slate-300 rounded bg-white font-medium">
+            <option value="ALL">Consolidated View — All 5 Mines</option>
+            <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+            <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+            <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+            <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+            <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-amber-50 border-b border-amber-200 flex items-center justify-between gap-3">
+          <div>
+            <div class="text-xs font-bold text-slate-800"><i class="fa-solid fa-map mr-1.5 text-amber-700"></i>DGMS Field Paper Map</div>
+            <div class="text-[10px] text-slate-500">Offline paper map — no external map tiles, API keys, or internet map service required. DGMS can switch between consolidated and individual mine views.</div>
+          </div>
+          <span id="screen17-scope-badge" class="text-[10px] font-bold px-2 py-1 rounded bg-slate-800 text-white">Scope loading…</span>
+        </div>
+        <div id="screen17-map-summary" class="px-4 py-2 text-[11px] bg-slate-50 border-b border-slate-200 text-slate-700">Loading violation layers…</div>
+        <div class="px-4 py-2 bg-white border-b border-slate-200 flex flex-wrap items-center gap-3 text-[11px]">
+          <label class="font-bold text-slate-700">Severity</label>
+          <select id="screen17-severity-filter" onchange="renderScreen17GIS()" class="text-xs py-1 px-2 border border-slate-300 rounded">
+            <option value="ALL">All severities</option>
+            <option value="Critical">Critical</option>
+            <option value="Major">Major</option>
+            <option value="Minor">Minor</option>
+          </select>
+          <span class="text-slate-500">Markers are placed from the violation's logged GPS coordinate.</span>
+        </div>
+        <div id="screen17-map" style="height: 720px; width: 100%;"></div>
+        <div id="screen17-unmapped" class="hidden px-4 py-2 text-[11px] bg-amber-50 border-t border-amber-200 text-amber-800"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-[11px]">
+        <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-3 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-rose-600 inline-block"></span> Critical violation / critical-risk mine</div>
+        <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-3 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-orange-500 inline-block"></span> Major violation / elevated-risk mine</div>
+        <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-3 flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span> Minor violation</div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 18: STATUTORY REPORTS & DOCUMENT CENTER (PHASE 3/4) -->
+    <!-- ========================================================= -->
+    <section id="screen-18" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-blue-950 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 18 • Phase 3/4 — Reports, OCR &amp; Audit Trail</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Statutory Report &amp; Document Center</h2>
+        <p class="text-xs text-slate-500">One-click PDF export of statutory forms, document digitization via OCR, and the tamper-evident audit trail.</p>
+      </div>
+
+      <!-- Automated Report Generation -->
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <h3 class="text-xs font-bold text-slate-700 mb-3 flex items-center gap-1.5"><i class="fa-solid fa-file-pdf text-rose-600"></i> Automated Report Generation</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="border border-slate-200 rounded p-3">
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Form VII — Corrective Order &amp; Closure (single violation)</label>
+            <div class="flex gap-2">
+              <input id="report-violation-id" type="text" placeholder="e.g. VIOL-2026-0901" class="flex-1 text-xs py-1.5 px-2 border border-slate-300 rounded" />
+              <button onclick="downloadFormVII()" class="bg-rose-700 hover:bg-rose-800 text-white text-xs font-bold px-3 py-1.5 rounded shadow-sm whitespace-nowrap"><i class="fa-solid fa-download mr-1"></i> PDF</button>
+            </div>
+            <p class="text-[10px] text-slate-400 mt-1">Tip: copy an ID from the Violations Log (Screen 10).</p>
+          </div>
+          <div class="border border-slate-200 rounded p-3">
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Monthly Statutory Compliance Summary</label>
+            <div class="flex gap-2">
+              <select id="report-mine-select" class="flex-1 text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+                <option value="ALL">All Mines (Consolidated)</option>
+                <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery</option>
+                <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3</option>
+                <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+                <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery</option>
+                <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+              </select>
+              <button onclick="downloadMonthlySummary()" class="bg-blue-900 hover:bg-blue-950 text-white text-xs font-bold px-3 py-1.5 rounded shadow-sm whitespace-nowrap"><i class="fa-solid fa-download mr-1"></i> PDF</button>
+            </div>
+          </div>
+        </div>
+        <div id="report-status-msg" class="text-[11px] mt-2"></div>
+      </div>
+
+      <!-- OCR Document Digitization -->
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <h3 class="text-xs font-bold text-slate-700 mb-3 flex items-center gap-1.5"><i class="fa-solid fa-file-waveform text-purple-600"></i> OCR Document Digitization</h3>
+        <form onsubmit="handleOcrSubmit(event)" class="grid grid-cols-1 md:grid-cols-4 gap-3 items-end">
+          <div class="md:col-span-2">
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Scan / Photograph Document</label>
+            <input id="ocr-file-input" type="file" accept="image/*,.pdf,application/pdf" class="w-full text-xs" required />
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-700 mb-1">Document Type</label>
+            <select id="ocr-doc-type" class="w-full text-xs py-1.5 px-2 border border-slate-300 rounded bg-white">
+              <option value="CONTRACTOR_LICENSE">Contractor License</option>
+              <option value="INSPECTION_REGISTER">Inspection Register Page</option>
+              <option value="CTO_CERTIFICATE">CTO / Consent Certificate</option>
+              <option value="GENERIC">Generic Document</option>
+            </select>
+          </div>
+          <button type="submit" class="bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold px-3 py-2 rounded shadow-sm"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i> Digitize</button>
+          <div class="md:col-span-4 flex flex-wrap gap-2 pt-1 border-t border-slate-200">
+            <span class="text-[10px] font-bold text-slate-500 uppercase self-center mr-1">1-click samples:</span>
+            <button type="button" onclick="runSampleOcr('CONTRACTOR_LICENSE')" class="text-[10px] bg-slate-100 hover:bg-slate-200 border border-slate-300 px-2 py-1 rounded font-semibold">Sample Contractor License</button>
+            <button type="button" onclick="runSampleOcr('INSPECTION_REGISTER')" class="text-[10px] bg-slate-100 hover:bg-slate-200 border border-slate-300 px-2 py-1 rounded font-semibold">Sample Form IV Register</button>
+            <button type="button" onclick="runSampleOcr('CTO_CERTIFICATE')" class="text-[10px] bg-slate-100 hover:bg-slate-200 border border-slate-300 px-2 py-1 rounded font-semibold">Sample CTO Certificate</button>
+          </div>
+        </form>
+        <div id="ocr-result-panel" class="mt-3 text-xs hidden">
+          <div class="bg-slate-50 border border-slate-200 rounded p-3 space-y-2">
+            <div id="ocr-status-line" class="font-semibold"></div>
+            <div id="ocr-fields-panel"></div>
+            <details id="ocr-raw-details" class="hidden">
+              <summary class="cursor-pointer text-slate-500 text-[11px]">Raw OCR text</summary>
+              <pre id="ocr-raw-text" class="whitespace-pre-wrap text-[10px] text-slate-500 mt-1"></pre>
+            </details>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blockchain-Style Audit Trail -->
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700 flex justify-between items-center">
+          <span><i class="fa-solid fa-link mr-1 text-slate-500"></i> Hash-Chained Audit Trail</span>
+          <button onclick="verifyAuditChain()" class="text-[11px] bg-slate-800 hover:bg-slate-900 text-white px-2.5 py-1 rounded font-semibold"><i class="fa-solid fa-shield-check mr-1"></i> Verify Chain Integrity</button>
+        </div>
+        <div id="audit-verify-result" class="px-4 py-2 text-[11px]"></div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Entity</th>
+                <th class="py-2 px-3">Action</th>
+                <th class="py-2 px-3">Actor</th>
+                <th class="py-2 px-3">Summary</th>
+                <th class="py-2 px-3">Hash</th>
+                <th class="py-2 px-3">When</th>
+              </tr>
+            </thead>
+            <tbody id="screen18-audit-tbody" class="divide-y divide-slate-200">
+              <tr><td colspan="6" class="py-4 px-3 text-center text-slate-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- SCREEN 19: REMINDERS & ESCALATION ENGINE (PHASE 3) -->
+    <!-- ========================================================= -->
+    <section id="screen-19" class="hidden space-y-4 screen-transition">
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm p-4">
+        <span class="bg-amber-600 text-white text-[10px] font-mono px-2 py-0.5 rounded uppercase font-bold">Screen 19 • Phase 3 — Reminders &amp; Escalation Engine</span>
+        <h2 class="text-base font-bold text-slate-900 mt-1">Proactive Deadline &amp; Renewal Reminders</h2>
+        <p class="text-xs text-slate-500">Unlike the after-the-fact Red Alert / Stoppage Warning, this engine watches deadlines <em>before</em> they're missed — corrective-action windows, contractor licenses, and CTO renewals.</p>
+        <button onclick="triggerReminderScan()" class="mt-3 text-[11px] bg-amber-600 hover:bg-amber-700 text-white px-3 py-1.5 rounded font-semibold shadow-sm"><i class="fa-solid fa-arrows-rotate mr-1"></i> Re-Scan Now</button>
+        <span id="reminder-scan-status" class="text-[11px] text-slate-400 ml-2"></span>
+      </div>
+
+      <div id="screen19-kpis" class="grid grid-cols-2 md:grid-cols-4 gap-3"></div>
+
+      <div class="bg-white rounded-lg border border-slate-300 shadow-sm overflow-hidden">
+        <div class="px-4 py-2.5 bg-slate-100 border-b border-slate-300 text-xs font-bold text-slate-700">Pending Reminders (most urgent first)</div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 border-b border-slate-200 font-bold">
+              <tr>
+                <th class="py-2 px-3">Severity</th>
+                <th class="py-2 px-3">Mine</th>
+                <th class="py-2 px-3">Title</th>
+                <th class="py-2 px-3">Due</th>
+                <th class="py-2 px-3 text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody id="screen19-tbody" class="divide-y divide-slate-200">
+              <tr><td colspan="5" class="py-4 px-3 text-center text-slate-400">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================= -->
+  <!-- MODALS -->
+  <!-- ========================================================= -->
+
+  <!-- FORM IV SHIFT INSPECTION DETAILS MODAL -->
+  <div id="form-iv-details-modal" class="fixed inset-0 bg-slate-950/80 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-3xl w-full shadow-2xl border-t-4 border-blue-900 overflow-hidden screen-transition max-h-[90vh] flex flex-col">
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-blue-900 border border-blue-600 flex items-center justify-center text-amber-400 text-sm font-bold">
+            <i class="fa-solid fa-file-shield"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="bg-amber-500 text-slate-950 font-mono text-[10px] font-extrabold px-1.5 py-0.5 rounded">FORM IV STATUTORY REGISTER</span>
+              <span id="form-iv-modal-ref" class="font-mono text-xs text-blue-200">INSP-BCCL-2026-0901</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mt-0.5" id="form-iv-modal-title">Underground Colliery Shift Inspection Report</h3>
+          </div>
+        </div>
+        <button onclick="closeFormIvModal()" class="text-slate-400 hover:text-white text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-4 overflow-y-auto space-y-4 flex-1">
+        <!-- Metadata ribbon -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-50 border border-slate-200 p-3 rounded text-xs">
+          <div>
+            <span class="text-slate-500 block text-[10px]">Colliery Unit</span>
+            <strong id="form-iv-modal-mine" class="text-slate-800">BCCL - Jharia Colliery</strong>
+          </div>
+          <div>
+            <span class="text-slate-500 block text-[10px]">Working Face / District</span>
+            <strong id="form-iv-modal-location" class="text-slate-800">Seam XI, Panel B</strong>
+          </div>
+          <div>
+            <span class="text-slate-500 block text-[10px]">Shift & Date</span>
+            <strong id="form-iv-modal-shift" class="text-slate-800">Shift 1 (04 Sep 2026)</strong>
+          </div>
+          <div>
+            <span class="text-slate-500 block text-[10px]">Mining Sirdar (CMR 113)</span>
+            <strong id="form-iv-modal-inspector" class="text-slate-800">Rajesh Kumar Sharma</strong>
+          </div>
+        </div>
+
+        <!-- 10 parameters checklist summary list -->
+        <div class="space-y-2">
+          <div class="flex justify-between items-center">
+            <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider flex items-center gap-1.5">
+              <i class="fa-solid fa-list-check text-blue-900"></i>
+              <span>10-Point DGMS Statutory Parameters Audit Log</span>
+            </h4>
+            <span id="form-iv-modal-score" class="text-xs font-bold px-2 py-0.5 rounded font-mono bg-emerald-100 text-emerald-800 border border-emerald-300">
+              100% Compliant
+            </span>
+          </div>
+          <div id="form-iv-modal-items-container" class="space-y-2">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-100 px-4 py-3 border-t border-slate-200 flex justify-between items-center text-xs">
+        <span class="text-slate-500 font-mono text-[11px]"><i class="fa-solid fa-shield-check text-emerald-600 mr-1"></i> Form IV digitally attested under CMR 2017 Reg 113</span>
+        <button onclick="closeFormIvModal()" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded text-xs font-bold transition">
+          Close Audit Report
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CLOSED EVIDENCE PROOF MODAL -->
+  <div id="evidence-proof-modal" class="fixed inset-0 bg-slate-950/75 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-2xl w-full shadow-2xl border-t-4 border-emerald-600 overflow-hidden screen-transition">
+      <div class="bg-slate-900 text-white p-3.5 flex justify-between items-center">
+        <div>
+          <h3 class="text-sm font-bold flex items-center gap-2">
+            <i class="fa-solid fa-images text-emerald-400"></i>
+            <span>Statutory Photographic Proof (Form VII-A Compliance)</span>
+          </h3>
+          <p class="text-[11px] text-slate-300" id="proof-modal-subtitle">Violation VIOL-2026-0888 • NCL Singrauli OCP</p>
+        </div>
+        <button onclick="closeEvidenceModal()" class="text-slate-400 hover:text-white text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-4 space-y-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="bg-rose-50 p-2.5 rounded border border-rose-200 space-y-1.5">
+            <div class="flex justify-between items-center text-xs font-bold text-rose-900">
+              <span>BEFORE (Hazard Observation)</span>
+              <span class="text-[10px] font-mono text-rose-700">Form IV Inspection</span>
+            </div>
+            <img id="proof-modal-before-img" src="" class="w-full h-44 object-cover rounded border border-rose-300" alt="Before remediation" />
+            <p class="text-[11px] text-rose-950 italic" id="proof-modal-before-notes"></p>
+          </div>
+
+          <div class="bg-emerald-50 p-2.5 rounded border border-emerald-200 space-y-1.5">
+            <div class="flex justify-between items-center text-xs font-bold text-emerald-900">
+              <span>AFTER (Rectified & Cleared)</span>
+              <span class="text-[10px] font-mono text-emerald-700">Verified Fix</span>
+            </div>
+            <img id="proof-modal-after-img" src="" class="w-full h-44 object-cover rounded border border-emerald-300" alt="After remediation" />
+            <p class="text-[11px] text-emerald-950 italic" id="proof-modal-after-notes"></p>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-3 rounded border border-slate-200 text-xs space-y-1">
+          <div class="flex justify-between">
+            <span class="text-slate-500">Supervisory Clearance:</span>
+            <strong id="proof-modal-supervisor" class="text-slate-900">Verified & Approved</strong>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Statutory Closure Timestamp:</span>
+            <span id="proof-modal-timestamp" class="font-mono text-slate-700"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-100 px-4 py-2.5 border-t border-slate-200 flex items-center justify-between">
+        <button id="proof-modal-red-alert-btn" type="button" onclick="openRedAlertComplaintModal(store.activeEvidenceViolId)" class="hidden px-3.5 py-1.5 bg-rose-700 hover:bg-rose-800 text-white rounded text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Raise Complaint & Issue Red Alert</span>
+        </button>
+        <button type="button" onclick="closeEvidenceModal()" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-900 text-white rounded text-xs font-bold transition ml-auto">
+          Close Evidence Viewer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- DGMS RED ALERT & RE-OPEN COMPLAINT MODAL -->
+  <div id="dgms-red-alert-modal" class="fixed inset-0 bg-slate-950/80 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-lg w-full shadow-2xl border-t-4 border-rose-600 overflow-hidden screen-transition">
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-start">
+        <div class="flex items-start gap-3">
+          <div class="w-9 h-9 rounded-full bg-rose-900/80 border border-rose-500 text-rose-300 flex items-center justify-center text-lg flex-shrink-0 mt-0.5">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="bg-rose-800 text-white text-[10px] font-mono px-2 py-0.5 rounded font-bold uppercase" id="red-alert-issuer-badge">DGMS / Mine Manager Notice</span>
+              <span class="bg-amber-900/80 text-amber-200 text-[10px] font-mono px-2 py-0.5 rounded font-bold">Mines Act Sec 22</span>
+            </div>
+            <h3 class="text-sm font-bold text-white mt-1">Issue Statutory Red Alert & Re-Open Violation</h3>
+            <p class="text-[11px] text-slate-300" id="red-alert-modal-subtitle">Statutory deficiency notice for insufficient or substandard remediation work.</p>
+          </div>
+        </div>
+        <button onclick="closeRedAlertComplaintModal()" class="text-slate-400 hover:text-white text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-4 space-y-3.5">
+        <!-- Target Violation Summary Card -->
+        <div class="bg-slate-50 border border-slate-200 rounded p-3 text-xs space-y-1">
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500">Violation Reference:</span>
+            <strong id="red-alert-modal-viol-id" class="text-blue-900 font-mono font-bold">VIOL-2026-0870</strong>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500">Colliery / Workings Unit:</span>
+            <strong id="red-alert-modal-mine" class="text-slate-800 font-semibold">BCCL - Jharia Colliery</strong>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-slate-500" id="red-alert-target-label">Target Official:</span>
+            <span class="text-slate-800 font-medium" id="red-alert-modal-manager">Mine Manager (Colliery Agent)</span>
+          </div>
+        </div>
+
+        <!-- Statutory 28-Day Threshold Tracker Banner -->
+        <div id="red-alert-modal-counter-card" class="bg-rose-50 border border-rose-300 rounded p-3 text-xs space-y-1.5">
+          <div class="flex justify-between items-center">
+            <span class="font-bold text-rose-900 flex items-center gap-1.5">
+              <i class="fa-solid fa-clock-rotate-left text-rose-700"></i>
+              <span>Rolling 28-Day Red Alert Counter:</span>
+            </span>
+            <span id="red-alert-modal-count-badge" class="bg-rose-700 text-white font-mono text-[11px] px-2.5 py-0.5 rounded font-bold">
+              0 of 3 Active
+            </span>
+          </div>
+          <p class="text-[11px] text-rose-800 leading-snug" id="red-alert-threshold-rule">
+            <strong>Statutory Enforcement Rule:</strong> If <strong>more than 3 Red Alerts</strong> are given to a Mine Manager in 28 days, the Mine Manager is <strong>suspended for 28 days</strong> and the mine <strong>stops functioning for 14 days</strong>.
+          </p>
+          <div class="w-full bg-rose-200 rounded-full h-2 mt-1 overflow-hidden">
+            <div id="red-alert-modal-progress" class="bg-rose-600 h-2 rounded-full transition-all duration-300" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- DGMS Complaint Directives Input -->
+        <div>
+          <label class="block text-xs font-bold text-slate-800 mb-1">
+            DGMS Remediation Deficiency Findings & Directives <span class="text-rose-600">*</span>
+          </label>
+          <textarea 
+            id="red-alert-modal-reason" 
+            rows="3" 
+            class="w-full p-2.5 border border-slate-300 rounded bg-white text-xs text-slate-900 font-sans focus:ring-2 focus:ring-rose-800 focus:border-rose-800"
+            placeholder="Specify why the closed work was insufficient (e.g. Photo proof reveals incomplete roof anchorage; secondary supports absent; gas readings unsubstantiated)..."
+          >Physical inspection and evidence review reveals remedial work done is substandard and fails DGMS safety thresholds under CMR-2017. Violation is officially re-opened. Rectify hazard under full supervisory presence immediately.</textarea>
+        </div>
+      </div>
+
+      <div class="bg-slate-100 px-4 py-3 border-t border-slate-200 flex justify-end gap-2">
+        <button type="button" onclick="closeRedAlertComplaintModal()" class="px-4 py-2 border border-slate-300 hover:bg-slate-200 text-slate-700 rounded text-xs font-bold transition">
+          Cancel
+        </button>
+        <button type="button" onclick="submitDgmsRedAlert()" class="px-5 py-2 bg-rose-700 hover:bg-rose-800 text-white rounded text-xs font-bold shadow transition flex items-center gap-1.5">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <span>Issue Red Alert & Re-Open Violation</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL (Common) -->
+  <div id="success-modal" class="fixed inset-0 bg-slate-950/60 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-md w-full shadow-2xl border-t-4 border-emerald-600 overflow-hidden screen-transition">
+      <div class="p-6 text-center space-y-3">
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-3xl">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900" id="modal-title">Statutory Inspection Filed Successfully</h3>
+        <p class="text-xs text-slate-600" id="modal-description">
+          Inspection record and corrective action orders have been officially logged in the KHADAN RAKSHAK database under DGMS regulations.
+        </p>
+
+        <div class="bg-slate-50 border border-slate-200 rounded p-3 text-left text-xs font-mono space-y-1.5">
+          <div class="flex justify-between">
+            <span class="text-slate-500">Reference Number:</span>
+            <span id="modal-receipt-ref" class="font-bold text-blue-900">INSP-BCCL-2026-0902-8419</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Filing Timestamp:</span>
+            <span id="modal-receipt-time">02 Sep 2026 22:48 IST</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Action Orders Dispatched:</span>
+            <span class="font-bold text-rose-600" id="modal-receipt-orders">2 Action Orders</span>
+          </div>
+        </div>
+
+        <div class="pt-2 flex flex-col gap-2">
+          <button onclick="closeModalAndGoToScreen(2)" class="w-full py-2.5 bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold rounded shadow transition">
+            Return to Inspection Desk (Screen 2)
+          </button>
+          <button onclick="closeModalAndSignOut()" class="w-full py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-semibold rounded border border-slate-300 transition">
+            Sign Out to Switch Role
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACCESS RESTRICTED MODAL (Enforces Role-Based Access Control) -->
+  <div id="access-restricted-modal" class="fixed inset-0 bg-slate-950/70 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-md w-full shadow-2xl border-t-4 border-rose-600 overflow-hidden screen-transition">
+      <div class="p-6 space-y-4 text-center">
+        <div class="w-14 h-14 bg-rose-100 text-rose-700 rounded-full flex items-center justify-center mx-auto text-2xl">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <div>
+          <h3 class="text-base font-bold text-slate-900">Access Restricted — Statutory Role Policy</h3>
+          <p class="text-xs text-slate-600 mt-1" id="access-denied-message">
+            This screen requires designated authority and is restricted under your active credentials.
+          </p>
+        </div>
+
+        <div class="bg-slate-50 border border-slate-200 rounded p-3 text-left text-xs font-mono space-y-1">
+          <div class="flex justify-between">
+            <span class="text-slate-500">Your Active Role:</span>
+            <span id="denied-user-role" class="font-bold text-blue-900">Field Safety Inspector</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-500">Required Clearance:</span>
+            <span id="denied-required-role" class="font-bold text-rose-600">Mine Manager / Corporate</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2 pt-1">
+          <button onclick="closeAccessRestrictedModal()" class="w-full py-2.5 bg-[#0b2545] hover:bg-[#133b68] text-white font-bold text-xs rounded transition shadow">
+            Return to Authorized Dashboard
+          </button>
+          <button onclick="logoutToScreen1()" class="w-full py-2 bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 font-bold text-xs rounded transition flex items-center justify-center gap-1.5">
+            <i class="fa-solid fa-power-off text-amber-700"></i>
+            <span>Sign Out to Login as Another Role</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIVERSAL COLLIERY SAFETY SNAPSHOT MODAL -->
+  <div id="mine-snapshot-modal" class="fixed inset-0 bg-slate-950/70 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-lg w-full shadow-2xl border-t-4 border-blue-900 overflow-hidden screen-transition">
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-shield-halved text-amber-400"></i>
+          <div>
+            <h3 class="text-sm font-bold">Colliery Safety Health Overview</h3>
+            <p class="text-[11px] text-slate-300">Basic Statutory Governance Snapshot (All Roles)</p>
+          </div>
+        </div>
+        <button onclick="closeMineSnapshotModal()" class="text-slate-400 hover:text-white text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-4">
+        <div class="flex justify-between items-center bg-slate-50 border border-slate-200 p-3 rounded">
+          <div>
+            <span class="text-[10px] text-slate-500 uppercase font-mono">Designated Mine Unit</span>
+            <h4 class="text-sm font-bold text-slate-900" id="modal-snapshot-mine">BCCL - Jharia Underground Colliery</h4>
+            <p class="text-xs text-slate-600">Seam V/VI • Depth 310m • Degree III Gassy Seam</p>
+          </div>
+          <span class="bg-emerald-100 text-emerald-800 border border-emerald-300 px-2.5 py-1 rounded text-xs font-bold" id="snapshot-compliance-pct">
+            92.4% Compliance
+          </span>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3 text-center text-xs">
+          <div class="bg-blue-50 border border-blue-200 p-2.5 rounded">
+            <span class="text-slate-500 text-[11px] block">Open Non-Compliances</span>
+            <span class="text-lg font-bold text-blue-900" id="snapshot-open-count">4 Items</span>
+          </div>
+          <div class="bg-rose-50 border border-rose-200 p-2.5 rounded">
+            <span class="text-rose-600 text-[11px] block">Critical / 24h</span>
+            <span class="text-lg font-bold text-rose-700" id="snapshot-critical-count">2 Items</span>
+          </div>
+          <div class="bg-amber-50 border border-amber-200 p-2.5 rounded">
+            <span class="text-amber-700 text-[11px] block">Under Remediation</span>
+            <span class="text-lg font-bold text-amber-800" id="snapshot-pending-count">2 Items</span>
+          </div>
+        </div>
+
+        <div class="text-xs text-slate-600 bg-slate-100 p-3 rounded space-y-1">
+          <div class="font-bold text-slate-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-info text-blue-800"></i>
+            <span>Statutory Shift Directives (CMR 2017)</span>
+          </div>
+          <p class="text-[11px]">Daily multi-gas checks mandatory at Return Airway Gate-3. All personnel must carry functional filter self-rescuers before entering split.</p>
+        </div>
+
+        <button onclick="closeMineSnapshotModal()" class="w-full py-2 bg-blue-900 hover:bg-blue-800 text-white font-semibold text-xs rounded transition">
+          Close Snapshot
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIXER ESCALATION ALERT MODAL (MINE MANAGER, DGMS) -->
+  <div id="fixer-alert-modal" class="fixed inset-0 bg-slate-950/70 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-lg w-full shadow-2xl border-t-4 border-amber-600 overflow-hidden screen-transition">
+      <div class="bg-slate-900 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-bell text-amber-400 text-lg"></i>
+          <div>
+            <h3 class="text-sm font-bold">Issue Statutory Escalation Alert to Fixer</h3>
+            <p class="text-[11px] text-slate-300">Form VII Statutory Directive • Immediate Fixer Notification</p>
+          </div>
+        </div>
+        <button onclick="closeFixerAlertModal()" class="text-slate-400 hover:text-white text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-3.5 text-xs">
+        <div class="bg-amber-50 border border-amber-300 p-3 rounded text-amber-950 space-y-1">
+          <div class="flex justify-between font-mono">
+            <span>Target Violation: <strong id="alert-modal-viol-id" class="text-blue-950">VIOL-2026-0901</strong></span>
+            <span id="alert-modal-mine" class="text-slate-700">BCCL Jharia Colliery</span>
+          </div>
+          <p class="text-[11px]" id="alert-modal-title">Roof Bolt Loose & Bed Separation Observed</p>
+          <div class="text-[11px] text-slate-600">
+            <span id="alert-modal-assigned-label">Assigned Fixer:</span> <strong id="alert-modal-assigned-to" class="text-slate-900">Anil Verma</strong>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Alert Escalation Level *</label>
+          <select id="alert-modal-level" class="w-full py-2 px-2.5 border border-slate-300 rounded bg-white font-semibold">
+            <option value="URGENT_NOTICE">🚨 URGENT NOTICE (Immediate Shift Remediation Required)</option>
+            <option value="STATUTORY_DIRECTIVE">⚖️ STATUTORY DIRECTIVE (CMR 2017 Compliance Order)</option>
+            <option value="SHOW_CAUSE">⚠️ SHOW CAUSE NOTICE (Overdue Penalty Warning)</option>
+            <option value="WORK_SUSPENSION_WARNING">⛔ WORK SUSPENSION WARNING (Stop Work in Hazard Area)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Statutory Directives & Instructions to Fixer *</label>
+          <textarea id="alert-modal-directives" rows="3" class="w-full p-2.5 border border-slate-300 rounded bg-white text-xs" placeholder="Specify instructions (e.g. Stop haulage belt immediately, deploy secondary roof support, inspect methane concentration)...">Hazard poses imminent safety danger under CMR-2017. Rectify defect immediately within the ongoing shift and upload verified photographic proof.</textarea>
+        </div>
+
+        <div class="flex justify-end gap-2 pt-2 border-t border-slate-200">
+          <button type="button" onclick="closeFixerAlertModal()" class="px-4 py-2 border border-slate-300 hover:bg-slate-100 rounded text-slate-700 font-semibold">
+            Cancel
+          </button>
+          <button type="button" onclick="submitFixerAlert()" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold rounded shadow transition flex items-center gap-1.5">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Dispatch Alert to Fixer</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DGMS SECTION 22 WORK-STOPPAGE DIRECTIVE MODAL (CORPORATE DGMS) -->
+  <div id="dgms-warning-modal" class="fixed inset-0 bg-slate-950/75 z-50 hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-lg max-w-lg w-full shadow-2xl border-t-4 border-rose-600 overflow-hidden screen-transition">
+      <div class="bg-rose-950 text-white p-4 flex justify-between items-center">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-triangle-exclamation text-rose-400 text-xl"></i>
+          <div>
+            <h3 class="text-sm font-bold">Issue Section 22 Work-Stoppage Warning</h3>
+            <p class="text-[11px] text-rose-200">DGMS Directorate Regulatory Directive • Mines Act, 1952</p>
+          </div>
+        </div>
+        <button onclick="closeDgmsWarningModal()" class="text-rose-300 hover:text-white text-base">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-5 space-y-3.5 text-xs">
+        <div class="bg-rose-50 border-l-4 border-rose-600 p-3 text-rose-950 rounded-r text-[11px] leading-relaxed">
+          <strong>Statutory Power under Mines Act Section 22 / 22A:</strong>
+          DGMS may prohibit employment or active extraction in any mine or district where an imminent danger exists until the hazard is rectified and confirmed idle during repairs.
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Target Colliery *</label>
+          <select id="dgms-warning-mine" class="w-full py-2 px-2.5 border border-slate-300 rounded bg-white font-semibold">
+            <option value="BCCL - Jharia Colliery">BCCL - Jharia Colliery (Underground, Seam V)</option>
+            <option value="SECL - Korba Deep Pit-3">SECL - Korba Deep Pit-3 (Gassy Seam III)</option>
+            <option value="NCL - Singrauli OCP Block-B">NCL - Singrauli OCP Block-B</option>
+            <option value="ECL - Raniganj Colliery">ECL - Raniganj Colliery (Incline 4)</option>
+            <option value="CCL - Piparwar Opencast">CCL - Piparwar Opencast</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">Formal Directive Text to Mine Manager *</label>
+          <textarea id="dgms-warning-text" rows="3" class="w-full p-2.5 border border-slate-300 rounded bg-white text-xs font-sans">Under Section 22 of Mines Act, you are hereby ordered to immediately suspend and stop all active extraction, cutting, and haulage operations in the affected working district during ongoing hazard rectification. Work must remain halted until statutory clearance is approved.</textarea>
+        </div>
+
+        <div class="flex justify-end gap-2 pt-2 border-t border-slate-200">
+          <button type="button" onclick="closeDgmsWarningModal()" class="px-4 py-2 border border-slate-300 hover:bg-slate-100 rounded text-slate-700 font-semibold">
+            Cancel
+          </button>
+          <button type="button" onclick="submitDgmsWorkStoppageWarning()" class="px-5 py-2 bg-rose-700 hover:bg-rose-800 text-white font-bold rounded shadow transition flex items-center gap-1.5">
+            <i class="fa-solid fa-gavel"></i>
+            <span>Serve Statutory Stoppage Order</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIVE NOTIFICATION TOAST CONTAINER (FOR CONSTANTLY UPDATING WEBPAGE) -->
+  <div id="live-toast-container" class="fixed bottom-4 right-4 z-50 flex flex-col space-y-2 pointer-events-none max-w-sm w-full">
+    <!-- Toasts injected dynamically -->
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- OFFICIAL GOV FOOTER -->
+  <!-- ========================================================= -->
+  <footer class="bg-slate-900 text-slate-300 text-xs mt-8 border-t-2 border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 py-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-[11px] pb-4 border-b border-slate-800">
+        <div>
+          <h4 class="text-amber-400 font-bold uppercase mb-1" data-i18n="footer_portal_title">KHADAN RAKSHAK PORTAL</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Smart AI-Based Governance & Statutory Compliance Monitoring System for Coal Mines (SIH-26024). Designed for Directorate General of Mines Safety & Ministry of Coal.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-amber-400 font-bold uppercase mb-1" data-i18n="footer_framework_title">STATUTORY FRAMEWORK</h4>
+          <p class="text-slate-400 leading-relaxed">
+            Coal Mines Regulations (CMR), 2017 • Mines Act, 1952 • Form IV & Form VII Automated Remedial Workflow.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-amber-400 font-bold uppercase mb-1" data-i18n="footer_arch_title">SYSTEM ARCHITECTURE</h4>
+          <p class="text-slate-400">
+            19-Screen Workflow • Live FastAPI Backend Integration • Real-Time Cross-Role Updates via WebSocket.
+          </p>
+        </div>
+      </div>
+      <div class="pt-3 text-center text-slate-500 text-[10px] flex flex-col sm:flex-row justify-between items-center gap-2">
+        <span>© 2026 Ministry of Coal, Government of India. All Rights Reserved.</span>
+        <span>Built for Smart India Hackathon (SIH-26024)</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================= -->
+  <!-- CONVERSATIONAL ASSISTANT WIDGET (PHASE 4) -->
+  <!-- ========================================================= -->
+  <div id="chatbot-widget" class="hidden fixed bottom-5 right-5 z-50">
+    <div id="chatbot-panel" class="hidden w-80 sm:w-96 bg-white rounded-lg shadow-2xl border border-slate-300 mb-3 flex flex-col overflow-hidden" style="height: 420px;">
+      <div class="bg-slate-900 text-white px-3 py-2.5 flex justify-between items-center gap-2">
+        <div class="flex items-center gap-2 text-xs font-bold"><i class="fa-solid fa-robot text-amber-400"></i> <span id="chatbot-title">KHADAN RAKSHAK Assistant</span></div>
+        <div class="flex items-center gap-2">
+          <select id="chatbot-language" aria-label="Assistant language" onchange="setLanguage(this.value)" class="text-[11px] text-slate-900 rounded px-1.5 py-1 bg-white">
+            <option value="en">English</option><option value="hi">हिन्दी</option>
+          </select>
+          <button onclick="toggleChatbot()" aria-label="Close assistant" class="text-slate-400 hover:text-white text-xs"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <div id="chatbot-messages" aria-live="polite" class="flex-1 overflow-y-auto p-3 space-y-2 text-xs bg-slate-50"></div>
+      <div id="chatbot-suggestions" class="px-2 py-2 flex flex-wrap gap-1.5 bg-white border-t border-slate-100">
+        <button type="button" data-chat-query-en="What is the compliance score?" data-chat-query-hi="अनुपालन स्कोर कितना है?" class="text-[10px] border border-slate-300 rounded-full px-2 py-1 hover:bg-blue-50">Compliance / अनुपालन</button>
+        <button type="button" data-chat-query-en="How many open violations?" data-chat-query-hi="कितने उल्लंघन खुले हैं?" class="text-[10px] border border-slate-300 rounded-full px-2 py-1 hover:bg-blue-50">Violations / उल्लंघन</button>
+        <button type="button" data-chat-query-en="Any overdue reminders?" data-chat-query-hi="क्या कोई अनुस्मारक लंबित हैं?" class="text-[10px] border border-slate-300 rounded-full px-2 py-1 hover:bg-blue-50">Reminders / अनुस्मारक</button>
+        <button type="button" data-chat-query-en="What is the mine risk score?" data-chat-query-hi="खदान का जोखिम स्कोर क्या है?" class="text-[10px] border border-slate-300 rounded-full px-2 py-1 hover:bg-blue-50">Risk / जोखिम</button>
+      </div>
+      <form onsubmit="handleChatSubmit(event)" class="border-t border-slate-200 p-2 flex gap-1.5">
+        <input id="chatbot-input" type="text" placeholder="Ask about compliance, violations, reminders..." class="flex-1 min-w-0 text-xs px-2 py-2 border border-slate-300 rounded" autocomplete="off" aria-label="Ask the assistant" />
+        <button id="chatbot-send" type="submit" aria-label="Send message" class="bg-blue-900 hover:bg-blue-950 text-white px-3 py-2 rounded text-xs"><i class="fa-solid fa-paper-plane"></i></button>
+      </form>
+    </div>
+    <button onclick="toggleChatbot()" class="w-12 h-12 rounded-full bg-amber-500 hover:bg-amber-400 text-slate-950 shadow-xl flex items-center justify-center text-lg border-2 border-white">
+      <i class="fa-solid fa-comment-dots"></i>
+    </button>
+  </div>
+
+  <!-- Live Backend Integration Layer (loads before app.js so API_BASE etc. are defined) -->
+  <script src="live-integration.js"></script>
+
+  <!-- Modular JavaScript Engine -->
+  <script src="app.js"></script>
+
+  <!-- Phase 3/4/5 Extension Layer: Grievances, GIS, Reports/OCR/Audit, Reminders, Chatbot, i18n -->
+  <script src="phase3.js"></script>
+  <script src="offline-queue.js"></script>
+  <script>
+    if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(err => console.warn("Service worker registration failed:", err)));
+    }
+  </script>
+</body>
+</html>
